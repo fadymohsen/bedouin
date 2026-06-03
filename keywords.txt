@@ -1,0 +1,295 @@
+Booking Details
+Trip Details
+Booking Data
+Trip Data
+Welcome Back, Ready for Adventure
+Welcome On Board
+Sign up now to discover the best travel destinations for your adventures or share your experiences all in one place.
+Reset Password
+Enter the confirmation code sent to your email.
+Enter Your New Password
+Enter a strong password to secure your account.
+Verified successfully!
+Enjoy an unforgettable adventure in the heart of the desert with the best safari services.
+Book safari trips in the best tourism experiences easily and flexibly. We provide you with an organized, guaranteed, and unique experience.
+Welcome back, please enter your details
+Enter your email and we'll send you a verification code
+Send Verification Code
+Sending...
+Remembered your password?
+Reset Password
+Enter the verification code and your new password
+Verification Code (OTP)
+New Password (8 characters)
+Password (8 characters)
+Updating...
+Update Password
+Back to
+Verification Code
+Enter the 6-digit code sent to you
+Verifying...
+Verify Now
+Didn't receive the code?
+Resend
+Start your journey with us and explore the most beautiful tourist attractions with a unique experience.
+Enjoy an unforgettable adventure in the heart of the desert with the best rental services.
+Booking
+About
+About The Company
+We aspire to be the first choice for safari experiences in Siwa Oasis, by offering trips that combine the thrill of adventure, the authenticity of the place, and respect for nature and local culture. Our mission is to create exceptional and safe experiences that leave an unforgettable mark in the memory of every visitor, through a professional team, precise organization, and full commitment to the highest standards of quality and safety, while ensuring sustainability and preserving the beauty of Siwa for future generations.
+Our Vision and Mission
+Who Are We? Our Identity and Mission
+About Us
+Activity
+Activity Description
+Additional Notes
+Adults
+All Rights Reserved
+Already have an account?
+Anonymous Guest
+Arabic
+Login
+available
+Back
+Blogs
+Book Now
+Book your spot Now
+Book Your Trip
+And Book Your Trip Now
+Booking Date
+Booking failed. Please try again.
+Status
+Booking submitted successfully!
+Budget
+Cancel
+The order has been cancelled successfully
+Booking Completed
+Booking Paid
+Booking Pending
+Children
+Chinese
+Click to change password
+Clients
+coming soon
+Company
+Completed
+Confirm New Password
+Confirm Password
+Contact
+Contact us now to be part of an unforgettable adventure... Let us guide you through the golden dunes and turn your desert dream into a real experience full of memories. We're here to answer all your questions and organize your trip with ease and comfort.
+Your Journey Experience
+We'd Love to Hear From You
+Get in Touch
+Contact Us
+Contact us now
+For more information about the trip, please contact us via WhatsApp
+Create Account
+Current Password
+Current password is required
+Customer Reviews
+Data updated successfully
+days
+day
+Delete
+Departure point
+Destination Point
+Destinations
+Developed by
+Don't have an account?
+Duration
+Edit
+Edit account details
+EGP
+Email
+Invalid email format
+Email is required
+End Date
+End date is required
+end point
+English
+Enter current password
+Enter your email
+Enter new password
+Re-enter new password
+An error occurred while changing the password
+Error fetching data
+Error fetching trip details
+Error loading data. Please try again later.
+An error occurred
+An error occurred while updating data
+Your journey with us doesn't end upon return... Rate your experience and help us provide better adventures.
+Experience Years
+Explore More
+Failed
+FAQ
+Frequently Asked Questions
+Featured Journeys
+First Name
+First name is required
+Follow Us
+Forgot Password ?
+French
+German
+Get Directions
+groups
+Have any questions about the trip?
+Home
+Image size must not exceed 5 MB
+The image will be saved when the data is saved
+Invalid verification code
+Invalid token format
+Italian
+Join Our Newsletter
+Embark on an exceptional journey into the heart of the desert
+Journeys
+Siwa Oasis Adventures
+Language
+Last Name
+Last name is required
+Latest Articles
+Latest Published Articles
+Loading...
+Loading articles...
+Loading FAQs...
+Loading the story...
+Loading trip details...
+Loading your data...
+Location
+Login
+Login error
+Logout
+Are you sure you want to log out?
+Error logging out
+Yes
+Max Price
+Meet Our Team
+Message
+Min Price
+Mobile Number
+My Bookings
+My Experiences and Journeys
+My Journeys
+Name
+Network error. Please check your connection and try again.
+New image selected
+New Password
+The new password must be at least 6 characters long
+New password is required
+Newsletter
+Next
+No bookings yet
+No comments available for this trip at the moment.
+No questions available at the moment
+No results found
+Sorry, we couldn't find any trips matching your search.
+No reviews yet. Be the first to rate this trip!
+not available
+Not editable in view mode
+Number of Trips
+Number of Guests
+Order History
+Order Now
+Error resending code
+Code resent successfully
+Error sending verification code
+Verification code sent to your email
+Our Clients
+Our History
+Our Mission
+Our Safari Story
+Our Services
+Our Statistics
+Our Team
+Our Vision
+Paid
+Parties & Events
+Password
+Error changing password
+Password changed successfully
+Password changed successfully
+Passwords do not match
+New passwords do not match
+Pending
+Personal Account
+Personal Data
+Personal Information
+Phone
+Phone number is required
+Please enter the 6-digit code
+Please log in first
+Please select images only
+Please select a star rating first
+Portuguese
+Previous
+Price
+Privacy Policy
+Profile
+Published Date
+Quick Links
+Rate us now
+Rating
+Your rating has been added successfully!
+Failed to submit rating
+Please make sure you are logged in first
+Read More
+Read More Articles
+Recreational Trips
+Register
+Reset
+Reviews
+Experience the real safari
+You're about to experience something different… a journey where you live the magic of the desert in every detail. With us, you won't just be a visitor — you'll be an adventurer discovering Siwa Oasis, walking among golden dunes, and creating your own memories. We're here to accompany you every step of the way and turn your trip into a story worth telling.
+We offer exciting safari experiences, from 4x4 tours and desert camping to sunset viewing and distinctive entertainment activities. With professional guides and safe equipment, we guarantee you an enjoyable, organized, and unforgettable journey from start to finish.
+We Offer You The Spirit Of Safari
+Safari Trips
+Save
+Save Changes
+Search
+Search by trip name
+see more
+Select a Trip
+Send Enquiry
+Send Message
+Service Rating
+Settings
+Share your Siwa experience with us
+Sign Out
+Sign Up
+Spanish
+Special Offers
+Start Date
+Start date is required
+Starting Point
+Subject
+Submit
+Submit Rating
+Subscribe
+Subscribe Now
+Success
+Swedish
+Terms & Conditions
+Terms and Conditions & Privacy Policy
+Testimonials
+Therapeutic Lakes
+Total Amount
+The trap id field is required
+Trip Details
+Trip Duration
+Trip program details coming soon
+Trips
+Try Again
+Type of Journey
+An unexpected error occurred
+Update Profile
+Please select a valid date
+Verification successful!
+View Booking
+View Details
+View More Questions
+Website
+Welcome
+WhatsApp Number
+Why Choose Us
+Write your comment here...
+Your Email
+Booking Cancelled

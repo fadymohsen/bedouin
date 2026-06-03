@@ -1,0 +1,10 @@
+# robots.txt for Bedouin Trails
+User-agent: *
+Allow: /
+Disallow: /auth
+Disallow: /profile
+Disallow: /book
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://bedouin-trails.com/sitemap.xml

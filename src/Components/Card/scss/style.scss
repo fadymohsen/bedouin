@@ -1,0 +1,343 @@
+$primary-orange: #f59e0b;
+$text-dark: #1f2937;
+$text-gray: #6b7280;
+$white: #F5F5F5;
+$bg-gray: #fff;
+
+.safari-card {
+  background: $white;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    border-radius: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px;
+    border-radius: 1rem;
+  }
+}
+
+.image-container {
+  position: relative;
+  height: 22.813rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: none !important;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  border: 3px solid $white outset;
+
+  * {
+    border: none !important;
+  }
+
+  @media (max-width: 1200px) {
+    height: 340px;
+  }
+
+  @media (max-width: 992px) {
+    height: 300px;
+    border-radius: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 260px;
+    border-radius: 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 220px;
+    border-radius: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .rating-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $white;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px 20px;
+    height: 45px;
+    text-align: center;
+
+    span {
+      font-size: .9rem;
+      font-weight: bold;
+      gap: 5px;
+      color: $text-dark;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      direction: ltr;
+      z-index: 1000;
+      min-width: 30px;
+      height: 100%;
+      svg{
+        margin-bottom: .2rem !important;
+      }
+    }
+
+    min-width:4rem;
+    max-width:4em;
+    $radius: 25px;
+    border-bottom-right-radius: $radius;
+    border: 3px solid $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -$radius;
+      width: $radius;
+      height: $radius;
+      background: transparent;
+      border-top-left-radius: $radius;
+      box-shadow: -15px -15px 0 10px $white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -$radius;
+      left: 0;
+      width: $radius;
+      height: $radius;
+      background: transparent;
+      border-top-left-radius: $radius;
+      box-shadow: -15px -15px 0 10px $white ;
+    }
+
+    svg {
+      color: #fbbf24;
+    }
+  }
+}
+
+.title-badge {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $bg-gray;
+  padding: 12px 40px;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  z-index: 20;
+  width: auto !important;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  padding: 10px 30px;
+
+  @media(max-width: 992px) {}
+
+  @media (max-width: 768px) {
+    padding: 8px 24px;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 6px 18px;
+    border-radius: 1.2rem;
+    -webkit-border-radius: 1.2rem;
+    -moz-border-radius: 1.2rem;
+    -ms-border-radius: 1.2rem;
+    -o-border-radius: 1.2rem;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: .98rem;
+    letter-spacing: 1px;
+    color: $text-dark;
+
+    @media (max-width: 992px) {
+      font-size: .95rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.info-section {
+  padding: 40px 15px 15px 15px;
+  text-align: center;
+
+  @media (max-width: 992px) {
+    padding: 30px 12px 12px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px 10px 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px 8px 8px;
+  }
+
+  .location-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+
+    @media (max-width: 992px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+
+    .loc-item {
+      .name {
+        // font-weight: bold;
+        font-size: 0.9rem;
+        display: block;
+
+        @media (max-width: 768px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      .date {
+        color: #000;
+        font-size: 1em;
+        font-weight: 700;
+
+        @media (max-width: 768px) {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .icon-circle {
+      img {
+        width: 48px;
+
+        @media (max-width: 768px) {
+          width: 40px;
+        }
+
+        @media (max-width: 480px) {
+          width: 32px;
+        }
+      }
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+      gap: 5px;
+    }
+
+    .stat-pill {
+      background: #fdfdfd;
+      border: 1px solid #f3f4f6;
+      padding: 8px 12px;
+      border-radius: 1.2rem;
+      flex: 1;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+
+      @media (max-width: 992px) {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+      }
+
+      @media (max-width: 768px) {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  a {
+    width: 100%;
+  }
+
+  .details-btn {
+    width: 100%;
+    background: #fdfdfd;
+    border: 1px solid #f3f4f6;
+    padding: 12px;
+    border-radius: 1.4rem;
+    font-weight: bold;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-border-radius: 1.4rem;
+    -moz-border-radius: 1.4rem;
+    -ms-border-radius: 1.4rem;
+    -o-border-radius: 1.4rem;
+
+    @media (max-width: 992px) {
+      padding: 10px;
+      font-size: 0.85rem;
+      width: 100%;
+
+    }
+
+    @media (max-width: 768px) {
+      padding: 8px;
+      font-size: 0.8rem;
+      border-radius: 1.2rem;
+      width: 100%;
+
+    }
+
+    background-color: #CF9050;
+    color: #fff;
+
+    &:hover {
+      background: #f9fafb;
+      border-color: #d1d5db;
+      color: #4b5563;
+    }
+  }
+}

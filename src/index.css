@@ -1,0 +1,244 @@
+* {
+    font-family: "El Messiri";
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+h1,
+.h1 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2,
+.h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.875rem;
+}
+
+h3,
+.h3 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+h4,
+.h4 {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+}
+
+h5,
+.h5 {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+h6,
+.h6 {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+span,
+small,
+.text-small {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    touch-action: manipulation;
+    border: none;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    top: 0 !important;
+    position: static !important;
+}
+
+
+
+
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+
+    button,
+    a,
+    .clickable {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    * {
+        max-width: 100vw;
+    }
+}
+
+/* Safe area insets for notched phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    width: 100%;
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    padding: 40px 20px;
+}
+
+.page-content {
+    min-height: calc(100vh - 200px);
+}
+
+/* Force question marks and punctuation to appear at the end in RTL mode */
+[dir="rtl"] .page-content {
+    direction: rtl;
+    unicode-bidi: plaintext;
+    text-align: right;
+}
+
+/* Specifically handle RTL text with question marks */
+[dir="rtl"] .page-content * {
+    unicode-bidi: embed;
+    direction: rtl;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive loader */
+@media (max-width: 768px) {
+    .loader {
+        min-height: 200px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .loader {
+        min-height: 150px;
+        font-size: 0.9rem;
+        padding: 30px 15px;
+    }
+
+}
+
+* {
+    outline: none;
+
+}

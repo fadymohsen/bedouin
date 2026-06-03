@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;500;600;700&display=swap');
+
+$primary-gold: #d4a574;
+$dark-gold: #b8925f;
+$white: #ffffff;
+$dark-bg: #1a1a1a;
+$light-bg: #faf9f7;
+$text-dark: #2d2d2d;
+$text-light: #0077FF;
+$error-red: #dc3545;
+$success-green: #28a745;
+$border-color: #e8e5e0;
+
+$font-display: 'El Messiri', serif;
+$font-body: 'El Messiri', sans-serif;
+
+// Mixins
+@mixin transition($property: all, $duration: 0.3s) {
+    transition: $property $duration ease;
+}
+
+@mixin rtl-support {
+    html[dir="rtl"] & {
+        @content;
+    }
+}
+
+.booking-details {
+    width: 95dvw;
+    margin: 1dvw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    gap: 2.5dvw;
+
+    // Mobile-first responsive design
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .leftP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 2; // Image comes after form on mobile
+
+        img {
+            border-radius: 2rem;
+            -webkit-border-radius: 2rem;
+            -moz-border-radius: 2rem;
+            -ms-border-radius: 2rem;
+            -o-border-radius: 2rem;
+            width: 100%;
+            // max-width: 400px;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            order: 1; // Image comes first on mobile
+            margin-bottom: 20px;
+
+            img {
+                max-width: 100%;
+                border-radius: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                border-radius: 1rem;
+            }
+        }
+    }
+
+    .rightP {
+        width: 95%;
+        order: 1; // Form comes first on desktop
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            order: 2; // Form comes after image on mobile
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 480px) {
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .field-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1%;
+        }
+
+        // Form Fields - RTL optimized
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            margin-bottom: 16px;
+
+            @media (max-width: 768px) {
+                margin-bottom: 14px;
+            }
+
+            @media (max-width: 480px) {
+                margin-bottom: 12px;
+            }
+
+            label {
+                font-family: $font-body;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: $text-light;
+                margin-bottom: 8px;
+                letter-spacing: 0;
+                display: block;
+
+                @media (max-width: 768px) {
+                    font-size: 0.85rem;
+                    margin-bottom: 6px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 0.8rem;
+                }
+            }
+
+            input,
+            textarea {
+                font-family: $font-body;
+                padding: 14px 18px;
+                border: 1.5px solid $border-color;
+                border-radius: 10px;
+                font-size: 0.95rem;
+                color: $text-dark;
+                background: $white;
+                text-align: right;
+                direction: rtl;
+                @include transition(all);
+                min-height: 48px;
+                width: 100%;
+
+                @media (max-width: 768px) {
+                    padding: 12px 16px;
+                    font-size: 0.9rem;
+                    min-height: 44px;
+                }
+
+                @media (max-width: 480px) {
+                    padding: 12px 14px;
+                    font-size: 0.85rem;
+                    min-height: 42px;
+                }
+
+                // Touch-friendly sizing for mobile
+                @media (max-width: 768px) {
+                    min-height: 48px;
+                    font-size: 16px; // Better for mobile readability
+                }
+
+                &::placeholder {
+                    color: #9ca3af;
+                    text-align: right;
+                    font-size: 0.9rem;
+
+                    @media (max-width: 768px) {
+                        font-size: 0.85rem;
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                    border-color: $primary-gold;
+                    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+                    background: #fefefe;
+                    transform: translateY(-1px);
+                }
+
+                &:hover {
+                    border-color: #d1d5db;
+                }
+
+                &.error {
+                    border-color: $error-red;
+                    background: #fff8f8;
+
+                    &:focus {
+                        box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+                    }
+                }
+
+                // Touch target optimization
+                @media (max-width: 768px) {
+                    min-height: 48px;
+                }
+            }
+
+            // Input with icon wrapper
+            .input-with-icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                &.calender {
+                    .input-icon {
+                        right: 10px;
+                        left: auto;
+
+                    }
+                }
+
+                .input-icon {
+                    position: absolute;
+                    left: 14px;
+                    color: $text-light;
+                    z-index: 2;
+                    pointer-events: none;
+                    font-size: .9rem;
+                    color: #000;
+
+                    @media (max-width: 768px) {
+                        left: 12px;
+                        font-size: 1rem;
+                    }
+                }
+
+                input {
+                    padding-right: 35px;
+                    width: 100%;
+
+                    @media (max-width: 768px) {
+                        padding-right: 40px;
+                    }
+                }
+            }
+
+            // Special styling for email to keep @ symbol visible
+            input[type="email"] {
+                direction: ltr;
+                padding-right: 20px !important;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 90px;
+                font-family: $font-body;
+            }
+
+            input[type="number"] {
+                -moz-appearance: textfield;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+            input[type="text"] {
+                cursor: pointer;
+                position: relative;
+
+                &::-webkit-calendar-picker-indicator {
+                    cursor: pointer;
+                }
+            }
+
+            .field-error {
+                color: $error-red;
+                font-size: 0.75rem;
+                margin-top: 5px;
+                font-family: $font-body;
+                text-align: right;
+            }
+        }
+
+        // Form Row Split
+        .form-row-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+
+            @media (max-width: 480px) {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        // RTL Layout adjustments
+        html[dir="rtl"] {
+            .form-panel {
+                direction: rtl;
+            }
+        }
+
+        // LTR Layout (default)
+        html[dir="ltr"] {
+            .form-panel {
+                direction: ltr;
+            }
+
+            .form-field {
+                text-align: left;
+
+                input,
+                textarea {
+                    text-align: left;
+                    direction: ltr;
+                }
+
+                .field-error {
+                    text-align: left;
+                }
+            }
+        }
+
+        // Responsive Adjustments
+        @media (max-width: 768px) {
+            .book-form-split {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        // Accessibility
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        // Small screen optimizations
+        @media (max-width: 360px) {
+            padding: 12px;
+            border-radius: 10px;
+
+            .form-field {
+                margin-bottom: 10px;
+
+                label {
+                    font-size: 0.75rem;
+                    margin-bottom: 4px;
+                }
+
+                input,
+                textarea {
+                    padding: 10px 12px;
+                    font-size: 0.8rem;
+                    min-height: 40px;
+                }
+
+                .input-with-icon {
+                    .input-icon {
+                        left: 10px;
+                        font-size: 0.8rem;
+                    }
+
+                    input {
+                        padding-left: 38px;
+                    }
+                }
+            }
+
+            .form-row-split {
+                gap: 16px;
+            }
+        }
+    }
+}
