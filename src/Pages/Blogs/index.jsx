@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import Loading from '../../Components/Loading';
 import api from '../../services/api';
+import staticArticles from '../../data/staticArticles';
 
 const Blog = ({ articles = [] }) => {
   const { t } = useTranslation();
@@ -22,13 +23,13 @@ const Blog = ({ articles = [] }) => {
         const response = await api.getAllArticles();
 
         if (response.data && response.data.data) {
-          setBlogData(response.data.data);
+          setBlogData([...staticArticles, ...response.data.data]);
         } else {
-          setBlogData([]);
+          setBlogData([...staticArticles]);
         }
       } catch (err) {
         console.error('Error fetching blog data:', err);
-        setError(err.message);
+        setBlogData([...staticArticles]);
       } finally {
         setIsLoading(false);
       }
@@ -41,7 +42,7 @@ const Blog = ({ articles = [] }) => {
     if (blogData.length > 0) {
       const articleId = searchParams.get('article');
       if (articleId) {
-        const foundArticle = blogData.find(a => a.id === parseInt(articleId));
+        const foundArticle = blogData.find(a => String(a.id) === String(articleId));
         if (foundArticle) {
           setActiveArticle(foundArticle);
           return;
@@ -100,8 +101,14 @@ const Blog = ({ articles = [] }) => {
         <div className="article-text">
           <h2>{currentArticle?.title}</h2>
 
-          <p className="description">{currentArticle?.content}</p>
-          {currentArticle?.description && <p>{currentArticle?.description}</p>}
+          {currentArticle?.isHtml ? (
+            <div className="html-content" dangerouslySetInnerHTML={{ __html: currentArticle.content }} />
+          ) : (
+            <>
+              <p className="description">{currentArticle?.content}</p>
+              {currentArticle?.description && <p>{currentArticle?.description}</p>}
+            </>
+          )}
         </div>
       </main>
     </div>
