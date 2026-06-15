@@ -447,11 +447,11 @@ const Auth = () => {
   const imageMap = {
     login: '/img/adventure.png',
     register: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=800&q=80',
-    'forgot-password': '/img/contact.png',
-    'otp-verify': '/img/contact.png',
+    'forgot-password': '/img/contact-cta.png',
+    'otp-verify': '/img/contact-cta.png',
     'reset-password': 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=800&q=80',
-    'register-password': '/img/contact.png',
-    verify: '/img/contact.png',
+    'register-password': '/img/contact-cta.png',
+    verify: '/img/contact-cta.png',
   };
   useEffect(() => {
     window.location.hash = view;
