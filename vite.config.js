@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  homepage: 'https://bedouintrails.com',
   base: "/",
   plugins: [
     react(),
@@ -12,6 +11,9 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      input: {
+        main: 'index.html'
+      },
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
@@ -34,12 +36,8 @@ export default defineConfig({
     cssMinify: true,
     sourcemap: false,
     reportCompressedSize: true,
-    input: {
-      main: '/index.html'
-    }
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', 'swiper', 'react-i18next'],
-    exclude: ['big-library']
   }
 })
