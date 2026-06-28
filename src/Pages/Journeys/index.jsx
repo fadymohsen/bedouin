@@ -104,11 +104,11 @@ export default function Journeys() {
                 <meta property="og:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://bedouintrails.com/journeys" />
-                <meta property="og:image" content="/og-image.jpg" />
+                <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
                 <meta name="twitter:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
-                <meta name="twitter:image" content="/og-image.jpg" />
+                <meta name="twitter:image" content="https://bedouintrails.com/og-image.jpg" />
             </Helmet>
             <div className="search-filtering">
                 <h1>{t('journeys_title')}</h1>

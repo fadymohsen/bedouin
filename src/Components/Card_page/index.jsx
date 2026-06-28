@@ -159,7 +159,7 @@ export default function Card_page() {
                 <link rel="canonical" href={`https://bedouintrails.com/cardpage/${id}`} />
                 <meta property="og:title" content={trip.meta_title || trip.name} />
                 <meta property="og:description" content={trip.meta_description || `${trip.name} - ${trip.interfaceFrom} → ${trip.interfaceTo}`} />
-                <meta property="og:image" content={trip.mainImage || '/og-image.jpg'} />
+                <meta property="og:image" content={trip.mainImage || 'https://bedouintrails.com/og-image.jpg'} />
                 <meta property="og:url" content={`https://bedouintrails.com/cardpage/${id}`} />
                 <meta property="og:type" content="product" />
             </Helmet>

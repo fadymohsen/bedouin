@@ -71,7 +71,7 @@ export default function FAQ({ faqs = [] }) {
         <meta property="og:title" content={`${t('faq')} | Bedouin Trails`} />
         <meta property="og:description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, and pricing." />
         <meta property="og:url" content="https://bedouintrails.com/faq" />
-        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
       </Helmet>
       <div className="faq-hero">
         <h1>{t('faq')}</h1>
