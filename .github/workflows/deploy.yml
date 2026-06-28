@@ -30,7 +30,7 @@ jobs:
         with:
           switches: -avz --delete
           path: dist/
-          remote_path: ~/public_html/
+          remote_path: /home/u461323939/domains/bedouintrails.com/public_html/
           remote_host: 62.72.17.235
           remote_port: 65002
           remote_user: u461323939
