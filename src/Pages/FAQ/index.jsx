@@ -4,6 +4,7 @@ import { FaChevronDown } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import Loading from '../../Components/Loading';
 import api from '../../services/api';
+import { Helmet } from 'react-helmet-async';
 
 export default function FAQ({ faqs = [] }) {
   const { t } = useTranslation();
@@ -63,6 +64,15 @@ export default function FAQ({ faqs = [] }) {
 
   return (
     <div className='faq'>
+      <Helmet>
+        <title>{t('faq')} | Bedouin Trails - Desert Safari in Bahariya & Siwa Oasis</title>
+        <meta name="description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, pricing, and what to expect on your adventure with Bedouin Trails." />
+        <link rel="canonical" href="https://bedouintrails.com/faq" />
+        <meta property="og:title" content={`${t('faq')} | Bedouin Trails`} />
+        <meta property="og:description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, and pricing." />
+        <meta property="og:url" content="https://bedouintrails.com/faq" />
+        <meta property="og:image" content="/og-image.jpg" />
+      </Helmet>
       <div className="faq-hero">
         <h1>{t('faq')}</h1>
         <div className="curve-bg"></div>
