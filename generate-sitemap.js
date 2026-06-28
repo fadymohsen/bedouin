@@ -44,7 +44,7 @@ async function generateSitemap() {
   ];
 
   const tripPages = trips.map(trip => ({
-    loc: `/cardpage/${trip.id}`,
+    loc: `/journeys/${trip.id}/${slugify(trip.name)}`,
     changefreq: 'weekly',
     priority: '0.7',
   }));

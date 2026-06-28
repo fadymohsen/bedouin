@@ -138,7 +138,7 @@ export default function Home() {
     }
 
     return (
-        <div className='home'>
+        <main className='home'>
             <Helmet>
                 <title>Bedouin Trails - Desert Safari & Adventure Tourism in Egypt | Siwa & Bahariya Oasis</title>
                 <meta name="description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert. Book your unforgettable adventure with Bedouin Trails today!" />
@@ -315,6 +315,6 @@ export default function Home() {
                 </div>
                 <Link to="/faq"><button>{t('view_more_questions')} <FaArrowRight /></button></Link>
             </div>
-        </div>
+        </main>
     )
 }

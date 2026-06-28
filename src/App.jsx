@@ -97,6 +97,7 @@ function App() {
                 <Route path="/blogs/:slug" element={<Blog />} />
                 <Route path="/faq" element={<FAQ />} />
                 {/* <Route path="/contact" element={<Contact />} /> */}
+                <Route path="/journeys/:id/:slug" element={<Card_page />} />
                 <Route path="/cardpage/:id" element={<Card_page />} />
                 <Route path="/myjourneys" element={<ProtectedRoute><MyJourneys /></ProtectedRoute>} />
                 <Route path="/order/cardpage/:id" element={<Card_page />} />

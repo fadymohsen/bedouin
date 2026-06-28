@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import Loading from '../../Components/Loading';
 import api from '../../services/api';
 import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../../utils/Breadcrumbs';
 
 export default function FAQ({ faqs = [] }) {
   const { t } = useTranslation();
@@ -64,6 +65,10 @@ export default function FAQ({ faqs = [] }) {
 
   return (
     <div className='faq'>
+      <Breadcrumbs items={[
+        { name: 'Home', url: 'https://bedouintrails.com/' },
+        { name: 'FAQ', url: 'https://bedouintrails.com/faq' }
+      ]} />
       <Helmet>
         <title>{t('faq')} | Bedouin Trails - Desert Safari in Bahariya & Siwa Oasis</title>
         <meta name="description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, pricing, and what to expect on your adventure with Bedouin Trails." />

@@ -152,7 +152,7 @@ export const SwiperCarousel = ({ status, orderid, isOrder = false, card_page = f
                             onClick={() => setActiveIndex(index)}
                         >
                             <div className="img-box">
-                                <img src={slide.image} alt={t(slide.title) || "Desert safari slide"} loading="lazy" />
+                                <img src={slide.image} alt={t(slide.title) || "Desert safari slide"} />
                             </div>
                             {position === 0 && <div className="active-frame" />}
                         </div>

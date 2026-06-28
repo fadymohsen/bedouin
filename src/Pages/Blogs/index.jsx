@@ -6,6 +6,7 @@ import Loading from '../../Components/Loading';
 import api from '../../services/api';
 import { slugify } from '../../utils/slugify';
 import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../../utils/Breadcrumbs';
 
 const Blog = () => {
   const { t } = useTranslation();
@@ -76,6 +77,12 @@ const Blog = () => {
   return (
     <div className="blogs-page">
       {currentArticle && (
+        <>
+        <Breadcrumbs items={[
+          { name: 'Home', url: 'https://bedouintrails.com/' },
+          { name: 'Blogs', url: 'https://bedouintrails.com/blogs' },
+          { name: currentArticle.title, url: `https://bedouintrails.com/blogs/${slugify(currentArticle.title)}` }
+        ]} />
         <Helmet>
           <title>{currentArticle.meta_title || currentArticle.title} | Bedouin Trails</title>
           <meta name="description" content={currentArticle.meta_description || currentArticle.title} />
@@ -89,7 +96,24 @@ const Blog = () => {
           <meta name="twitter:title" content={currentArticle.meta_title || currentArticle.title} />
           <meta name="twitter:description" content={currentArticle.meta_description || currentArticle.title} />
           <meta name="twitter:image" content={currentArticle.image} />
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": currentArticle.meta_title || currentArticle.title,
+              "description": currentArticle.meta_description || currentArticle.title,
+              "image": currentArticle.image,
+              "url": `https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`,
+              "publisher": {
+                "@type": "Organization",
+                "name": "Bedouin Trails",
+                "logo": { "@type": "ImageObject", "url": "https://bedouintrails.com/img/logo.png" }
+              },
+              "mainEntityOfPage": `https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`
+            })}
+          </script>
         </Helmet>
+        </>
       )}
       <aside className="sidebar">
         <h3>{t('latest_articles')}</h3>
@@ -111,15 +135,17 @@ const Blog = () => {
         </nav>
       </aside>
       <main className="content-section">
-        <div className="image-container">
-          <img src={currentArticle?.image} alt={currentArticle?.title} className="header-image" />
-        </div>
-        <div className="article-text">
-          <h2>{currentArticle?.title}</h2>
+        <article>
+          <div className="image-container">
+            <img src={currentArticle?.image} alt={currentArticle?.title} className="header-image" />
+          </div>
+          <div className="article-text">
+            <h1>{currentArticle?.title}</h1>
 
-          <p className="description">{currentArticle?.content}</p>
-          {currentArticle?.description && <p>{currentArticle?.description}</p>}
-        </div>
+            <p className="description">{currentArticle?.content}</p>
+            {currentArticle?.description && <p>{currentArticle?.description}</p>}
+          </div>
+        </article>
       </main>
     </div>
   );

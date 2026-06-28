@@ -3,6 +3,7 @@ import { FaStar } from 'react-icons/fa';
 import './scss/style.scss';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { slugify } from '../../utils/slugify';
 
 const CamelIcon = "/img/small-logo.png";
 
@@ -56,7 +57,7 @@ export default function Card({ data, orderID }) {
             <div className="stat-pill">{` ${data.countPeople} ${t('booking')}`}</div>
 
           </div>
-          <Link to={`${isMyJourney ? '/order/cardpage/' + orderID : '/cardpage/' + data.id}`}>
+          <Link to={`${isMyJourney ? '/order/cardpage/' + orderID : '/journeys/' + data.id + '/' + slugify(data.name)}`}>
             <button className={`details-btn`}>
               {t('view_details')}
             </button>

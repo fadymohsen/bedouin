@@ -10,6 +10,8 @@ import sweetAlert from '../../utils/sweetAlert';
 import Loading from '../Loading';
 import BookingDetails from '../BookingDetails';
 import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../../utils/Breadcrumbs';
+import { slugify } from '../../utils/slugify';
 
 export default function Card_page() {
     const { t } = useTranslation();
@@ -153,14 +155,19 @@ export default function Card_page() {
 
     return (
         <div className='Card_page' ref={topPageRef}>
+            <Breadcrumbs items={[
+                { name: 'Home', url: 'https://bedouintrails.com/' },
+                { name: 'Journeys', url: 'https://bedouintrails.com/journeys' },
+                { name: trip.name, url: `https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}` }
+            ]} />
             <Helmet>
                 <title>{trip.meta_title || trip.name} | Bedouin Trails</title>
                 <meta name="description" content={trip.meta_description || `${trip.name} - ${t('departure_point')}: ${trip.interfaceFrom} → ${trip.interfaceTo}. ${t('book_your_spot_now')} | Bedouin Trails`} />
-                <link rel="canonical" href={`https://bedouintrails.com/cardpage/${id}`} />
+                <link rel="canonical" href={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
                 <meta property="og:title" content={trip.meta_title || trip.name} />
                 <meta property="og:description" content={trip.meta_description || `${trip.name} - ${trip.interfaceFrom} → ${trip.interfaceTo}`} />
                 <meta property="og:image" content={trip.mainImage || 'https://bedouintrails.com/og-image.jpg'} />
-                <meta property="og:url" content={`https://bedouintrails.com/cardpage/${id}`} />
+                <meta property="og:url" content={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
                 <meta property="og:type" content="product" />
             </Helmet>
             {showPopup && (
