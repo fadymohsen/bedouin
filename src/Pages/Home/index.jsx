@@ -140,18 +140,18 @@ export default function Home() {
     return (
         <main className='home'>
             <Helmet>
-                <title>Bedouin Trails - Desert Safari & Adventure Tourism in Egypt | Siwa & Bahariya Oasis</title>
-                <meta name="description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert. Book your unforgettable adventure with Bedouin Trails today!" />
-                <meta name="keywords" content="desert safari, Egypt tourism, Siwa Oasis, Bahariya Oasis, adventure trips, Bedouin culture, White Desert, Black Desert, desert tours, سيوة, الواحات البحرية, الصحراء البيضاء, الصحراء السوداء" />
+                <title>Bedouin Trails - Egyptian Desert Safari Tour Company | Siwa & Bahariya Oasis Trips</title>
+                <meta name="description" content="Bedouin Trails is an Egyptian desert safari tour company based in Cairo. We organize guided safari trips to Bahariya Oasis, Siwa Oasis, the White Desert, and the Black Desert. Book your desert adventure today!" />
+                <meta name="keywords" content="Bedouin Trails company, desert safari tours Egypt, Siwa Oasis tours, Bahariya Oasis safari, White Desert camping, Black Desert tours, Egypt safari booking, بدوين ترايلز, رحلات سفاري, سيوة, الواحات البحرية, الصحراء البيضاء, الصحراء السوداء" />
                 <link rel="canonical" href="https://bedouintrails.com/" />
-                <meta property="og:title" content="Bedouin Trails - Desert Safari & Adventure Tourism in Egypt" />
-                <meta property="og:description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
+                <meta property="og:title" content="Bedouin Trails - Egyptian Desert Safari Tour Company | Book Safari Trips" />
+                <meta property="og:description" content="Bedouin Trails is an Egyptian desert safari tour company. We organize guided trips to Bahariya Oasis, Siwa Oasis, White Desert & Black Desert from Cairo." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://bedouintrails.com/" />
                 <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Bedouin Trails - Desert Safari & Adventure Tourism in Egypt" />
-                <meta name="twitter:description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
+                <meta name="twitter:title" content="Bedouin Trails - Egyptian Desert Safari Tour Company" />
+                <meta name="twitter:description" content="Bedouin Trails is an Egyptian desert safari tour company. We organize guided trips to Bahariya Oasis, Siwa Oasis, White Desert & Black Desert from Cairo." />
                 <meta name="twitter:image" content="https://bedouintrails.com/og-image.jpg" />
             </Helmet>
             <div className="carousel">

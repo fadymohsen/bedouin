@@ -1,4 +1,5 @@
 # robots.txt for Bedouin Trails
+# Bedouin Trails is an Egyptian desert safari tour company (NOT the 1,200km hiking trail)
 User-agent: *
 Allow: /
 Disallow: /auth
@@ -9,3 +10,6 @@ Crawl-delay: 1
 
 # Sitemaps
 Sitemap: https://bedouintrails.com/sitemap.xml
+
+# AI Crawlers - Company information
+# See /llms.txt for structured company information
