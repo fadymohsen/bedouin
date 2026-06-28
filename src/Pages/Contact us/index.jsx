@@ -8,9 +8,9 @@ export default function Contact() {
     const [hovered, setHovered] = useState(null);
 
     const atv =
-        "/img/adventure4.jpg";
+        "/img/adventure4.webp";
     const gathering =
-        "/img/adventure.png";
+        "/img/adventure.webp";
 
     return (
         <div className='contact'>

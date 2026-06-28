@@ -1,10 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { compression } from 'vite-plugin-compression2'
 
 export default defineConfig({
   base: "/",
   plugins: [
     react(),
+    compression({ algorithm: 'gzip' }),
+    compression({ algorithm: 'brotliCompress' }),
   ],
   server: {
     host: true
@@ -17,12 +20,12 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['react-icons', 'swiper', 'lucide-react'],
+          'ui-vendor': ['react-icons', 'swiper'],
           'i18n-vendor': ['react-i18next', 'i18next'],
         }
       }
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -38,6 +41,6 @@ export default defineConfig({
     reportCompressedSize: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'swiper', 'react-i18next'],
+    include: ['react', 'react-dom', 'react-router-dom', 'swiper', 'react-i18next', 'axios'],
   }
 })

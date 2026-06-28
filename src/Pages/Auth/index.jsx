@@ -4,7 +4,7 @@ import api from '../../services/api';
 import './scss/style.scss';
 import { useTranslation } from 'react-i18next';
 import sweetAlert from '../../utils/sweetAlert';
-import { Mail, Phone, LockKeyhole, Eye, EyeOff, ChevronLeft, ChevronDown } from 'lucide-react';
+import { FaEnvelope, FaPhone, FaLock, FaEye, FaEyeSlash, FaChevronLeft, FaChevronDown } from 'react-icons/fa';
 import LanguageSwitcher from '../../Components/LanguageSwitcher';
 
 const COUNTRIES = [
@@ -86,7 +86,7 @@ const PhoneInput = ({ value, onChange, onCountryChange, selectedCountry, placeho
         >
           <span className="country-flag">{selectedCountry.flag}</span>
           <span className="country-dial">{selectedCountry.dial}</span>
-          <ChevronDown size={14} className={`country-chevron ${open ? 'open' : ''}`} />
+          <FaChevronDown size={14} className={`country-chevron ${open ? 'open' : ''}`} />
         </button>
 
         <div className="phone-divider" />
@@ -145,7 +145,7 @@ const PasswordInput = ({ field, placeholder, value, onChange, showPassword, togg
   const isVisible = showPassword[field];
   return (
     <div className="input-icon-wrapper">
-      <LockKeyhole size={18} className="input-icon input-icon--start" />
+      <FaLock size={18} className="input-icon input-icon--start" />
       <input
         type={isVisible ? 'text' : 'password'}
         required
@@ -159,7 +159,7 @@ const PasswordInput = ({ field, placeholder, value, onChange, showPassword, togg
         role="button"
         aria-label={isVisible ? 'Hide password' : 'Show password'}
       >
-        {isVisible ? <EyeOff size={18} /> : <Eye size={18} />}
+        {isVisible ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
       </div>
     </div>
   );
@@ -445,13 +445,13 @@ const Auth = () => {
   };
 
   const imageMap = {
-    login: '/img/adventure.png',
+    login: '/img/adventure.webp',
     register: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=800&q=80',
-    'forgot-password': '/img/contact-cta.png',
-    'otp-verify': '/img/contact-cta.png',
+    'forgot-password': '/img/contact-cta.webp',
+    'otp-verify': '/img/contact-cta.webp',
     'reset-password': 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?auto=format&fit=crop&w=800&q=80',
-    'register-password': '/img/contact-cta.png',
-    verify: '/img/contact-cta.png',
+    'register-password': '/img/contact-cta.webp',
+    verify: '/img/contact-cta.webp',
   };
   useEffect(() => {
     window.location.hash = view;
@@ -543,7 +543,7 @@ const Auth = () => {
                 <p>{t('login_welcome')}</p>
                 <div className="input-group">
                   <div className="input-icon-wrapper">
-                    <Mail size={18} className="input-icon input-icon--start" />
+                    <FaEnvelope size={18} className="input-icon input-icon--start" />
                     <input type="email" required placeholder={t('email')}
                       onChange={(e) => setLoginData({ ...loginData, email: e.target.value })} />
                   </div>
@@ -589,7 +589,7 @@ const Auth = () => {
                 </div>
                 <div className="input-group">
                   <div className="input-icon-wrapper">
-                    <Mail size={18} className="input-icon input-icon--start" />
+                    <FaEnvelope size={18} className="input-icon input-icon--start" />
                     <input type="email" required placeholder={t('email')}
                       value={registerData.email}
                       onChange={(e) => setRegisterData({ ...registerData, email: e.target.value })} />
@@ -690,7 +690,7 @@ const Auth = () => {
                 <p>{t('forgot_password_desc')}</p>
                 <div className="input-group">
                   <div className="input-icon-wrapper">
-                    <Mail size={18} className="input-icon input-icon--start" />
+                    <FaEnvelope size={18} className="input-icon input-icon--start" />
                     <input type="email" required placeholder={t('email')}
                       value={forgotPasswordData.email}
                       onChange={(e) => setForgotPasswordData({ email: e.target.value })} />
@@ -712,7 +712,7 @@ const Auth = () => {
             <LanguageSwitcher />
           </div>
           {view !== 'login' && (
-            <button className="back-button" onClick={handleBack}><ChevronLeft /></button>
+            <button className="back-button" onClick={handleBack}><FaChevronLeft /></button>
           )}
           <div className="corner-curve corner-curve--bottom-right"></div>
           <div className="glass-card">

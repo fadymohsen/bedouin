@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import "./scss/style.scss";
 import LanguageSwitcher from "../LanguageSwitcher";
-import { TextAlignJustify } from "lucide-react";
+import { FaBars } from "react-icons/fa";
 
 export default function Navbar({ userData }) {
   const location = useLocation();
@@ -114,7 +114,7 @@ export default function Navbar({ userData }) {
           onClick={() => setDropdownOpen(prev => !prev)}
           aria-label="Toggle navigation"
         >
-          <TextAlignJustify size={14} />
+          <FaBars size={14} />
         </button>
         <LanguageSwitcher />
         {dropdownOpen && (
@@ -142,7 +142,7 @@ export default function Navbar({ userData }) {
                     onError={(e) => { e.target.onerror = null; e.target.src = "/img/profile-img.png"; }}
                   />
                   <span>{userData.first_name}</span>
-                  <TextAlignJustify size={18} />
+                  <FaBars size={18} />
                 </Link>
               ) : (
                 <Link to="/auth" className="nav-dropdown__login" onClick={() => setDropdownOpen(false)}>

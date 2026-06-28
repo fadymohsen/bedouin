@@ -45,7 +45,7 @@ function App() {
       }
     };
     fetchUserData();
-  }, [i18n.language]);
+  }, []);
 
   // Existing: route change loading
   useEffect(() => {

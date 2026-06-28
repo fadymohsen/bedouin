@@ -2,7 +2,7 @@ import "./scss/style.scss"
 import Card from "../../Components/Card"
 import { CardCarousel, SwiperCarousel } from "../../Components/Carousel"
 import { FaChevronDown, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { ArrowUpRight } from "lucide-react"
+import { FaArrowRight } from "react-icons/fa"
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -105,15 +105,15 @@ export default function Home() {
     };
 
     const activities = [
-        { id: 1, title: t('recreational_trips'), img: '/img/camel-ride.jpg' },
-        { id: 2, title: t('safari_trips'), img: '/img/quad-bike.jpg' },
-        { id: 3, title: t('parties_events'), img: '/img/events.jpg' },
-        { id: 4, title: t('therapeutic_lakes'), img: '/img/salt-lake.jpg' },
+        { id: 1, title: t('recreational_trips'), img: '/img/camel-ride.webp' },
+        { id: 2, title: t('safari_trips'), img: '/img/quad-bike.webp' },
+        { id: 3, title: t('parties_events'), img: '/img/events.webp' },
+        { id: 4, title: t('therapeutic_lakes'), img: '/img/salt-lake.webp' },
     ];
     const atv =
-        "/img/adventure.png";
+        "/img/adventure.webp";
     const gathering =
-        "/img/adventure1.jpg";
+        "/img/adventure1.webp";
     const safeFaqs = Array.isArray(homeData.commonQuestions) ? homeData.commonQuestions : [];
     const safeSliders = Array.isArray(homeData.sliders) ? homeData.sliders : [];
     const safeTraps = Array.isArray(homeData.traps) ? homeData.traps : [];
@@ -246,7 +246,7 @@ export default function Home() {
 
                 <div>
                     <a className="location" target='_blank' href="https://www.google.com/maps?q=28.345849,28.8724675&z=17&hl=en">
-                        <img src="/img/googlemaps.jpg" alt="Location map showing Bedouin Trails office in Cairo, Egypt" />
+                        <img src="/img/googlemaps.webp" alt="Location map showing Bedouin Trails office in Cairo, Egypt" loading="lazy" />
                         <div className="text">
                             <p>نتشرف بزيارتك لشركتنا</p>
                             <p>Egypt - Cairo</p>
@@ -275,7 +275,7 @@ export default function Home() {
                 <h1>{t('latest_published_articles')}</h1>
                 <BlogSection articles={safeArticles} />
                 <Link to="/blogs">
-                    <button>{t('read_more_articles')} <ArrowUpRight /></button>
+                    <button>{t('read_more_articles')} <FaArrowRight /></button>
                 </Link>
             </div>
 
@@ -283,7 +283,7 @@ export default function Home() {
                 <h1>{t('faq_title')}</h1>
                 <img
                     ref={faqImageRef}
-                    src="/img/faq-img.jpg"
+                    src="/img/faq-img.webp"
                     alt="FAQ"
                     loading="lazy"
                     onLoad={() => setFaqImageHeight(faqImageRef.current?.clientHeight || 0)}
@@ -310,7 +310,7 @@ export default function Home() {
                         )}
                     </div>
                 </div>
-                <Link to="/faq"><button>{t('view_more_questions')} <ArrowUpRight /></button></Link>
+                <Link to="/faq"><button>{t('view_more_questions')} <FaArrowRight /></button></Link>
             </div>
         </div>
     )

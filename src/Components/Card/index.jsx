@@ -22,7 +22,7 @@ export default function Card({ data, orderID }) {
           </div>
 
           <img
-            src={data.mainImage || data.image || '/img/adventure1.jpg'}
+            src={data.mainImage || data.image || '/img/adventure1.webp'}
             alt={data.name}
             loading="lazy"
             width="100%"

@@ -346,7 +346,7 @@ export default function BookForm({ traps = [] }) {
           <div
             className="image-panel-bg"
             style={{
-              backgroundImage: trip?.image ? `url(${trip.image})` : 'url(/img/adventure.png)'
+              backgroundImage: trip?.image ? `url(${trip.image})` : 'url(/img/adventure.webp)'
             }}
           />
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-import { Mail, Phone, Calendar } from 'lucide-react';
+import { FaEnvelope, FaPhone, FaCalendarAlt } from 'react-icons/fa';
 import "./scss/style.scss"
 export default function BookingDetails({ data }) {
   const { t } = useTranslation();
@@ -8,7 +8,7 @@ export default function BookingDetails({ data }) {
     <div className='booking-details'>
 
       <div className="leftP">
-        <img src="/img/camel-ride1.jpg" alt="Camel riding experience in the desert" srcset="" />
+        <img src="/img/camel-ride1.webp" alt="Camel riding experience in the desert" loading="lazy" />
       </div>
       <div className="rightP">
         <div className="field-row">
@@ -38,7 +38,7 @@ export default function BookingDetails({ data }) {
         <div className="form-field">
           <label>{t('email')}</label>
           <div className="input-with-icon">
-            <Mail className="input-icon" size={20} />
+            <FaEnvelope className="input-icon" size={20} />
             <input
               disabled
               type="email"
@@ -52,7 +52,7 @@ export default function BookingDetails({ data }) {
         <div className="form-field">
           <label>{t('phone')}</label>
           <div className="input-with-icon">
-            <Phone className="input-icon" size={20} />
+            <FaPhone className="input-icon" size={20} />
             <input
               disabled
               type="tel"
@@ -92,7 +92,7 @@ export default function BookingDetails({ data }) {
           <div className="form-field">
             <label>{t('start_date')}</label>
             <div className="input-with-icon calender">
-              <Calendar className="input-icon" size={20} />
+              <FaCalendarAlt className="input-icon" size={20} />
               <input
                 disabled
                 type="text"
@@ -104,7 +104,7 @@ export default function BookingDetails({ data }) {
           <div className="form-field">
             <label>{t('end_date')}</label>
             <div className="input-with-icon calender">
-              <Calendar className="input-icon" size={20} />
+              <FaCalendarAlt className="input-icon" size={20} />
               <input
                 disabled
                 type="text"

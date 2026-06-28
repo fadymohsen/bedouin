@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useState, useRef, useEffect } from 'react';
-import { Globe } from '@phosphor-icons/react';
+import { FaGlobe } from 'react-icons/fa';
 import './scss/style.scss';
 
 const LanguageSwitcher = () => {
@@ -44,7 +44,7 @@ const LanguageSwitcher = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Select Language"
             >
-                <Globe size={24} weight="thin" />
+                <FaGlobe size={24} />
             </button>
 
             {isOpen && (
