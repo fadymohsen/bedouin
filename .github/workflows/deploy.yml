@@ -28,7 +28,7 @@ jobs:
       - name: Deploy to Hostinger via rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -avz --delete
+          switches: -avz --exclude='app' --exclude='artisan' --exclude='bootstrap' --exclude='config' --exclude='database' --exclude='vendor' --exclude='storage' --exclude='routes' --exclude='resources' --exclude='composer.*' --exclude='.env'
           path: dist/
           remote_path: /home/u461323939/domains/bedouintrails.com/public_html/
           remote_host: 62.72.17.235
