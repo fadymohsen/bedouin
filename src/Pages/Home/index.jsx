@@ -140,18 +140,18 @@ export default function Home() {
     return (
         <div className='home'>
             <Helmet>
-                <title>Bedouin Trails - Authentic Desert Safari & Adventure Tourism in Egypt | Siwa & Matrouh</title>
-                <meta name="description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Siwa & Matrouh Governorate. Book your unforgettable desert adventure with Bedouin Trails today!" />
-                <meta name="keywords" content="desert safari, Egypt tourism, Siwa, Matrouh, adventure trips, Bedouin culture, white desert, black desert, desert tours, cultural journeys" />
-                <link rel="canonical" href="https://bedouin-trails.com/" />
-                <meta property="og:title" content="Bedouin Trails - Desert Safari & Adventure Tourism" />
-                <meta property="og:description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Siwa & Matrouh Governorate." />
+                <title>Bedouin Trails - Desert Safari & Adventure Tourism in Egypt | Siwa & Bahariya Oasis</title>
+                <meta name="description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert. Book your unforgettable adventure with Bedouin Trails today!" />
+                <meta name="keywords" content="desert safari, Egypt tourism, Siwa Oasis, Bahariya Oasis, adventure trips, Bedouin culture, White Desert, Black Desert, desert tours, سيوة, الواحات البحرية, الصحراء البيضاء, الصحراء السوداء" />
+                <link rel="canonical" href="https://bedouintrails.com/" />
+                <meta property="og:title" content="Bedouin Trails - Desert Safari & Adventure Tourism in Egypt" />
+                <meta property="og:description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://bedouin-trails.com/" />
+                <meta property="og:url" content="https://bedouintrails.com/" />
                 <meta property="og:image" content="/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Bedouin Trails - Desert Safari & Adventure Tourism" />
-                <meta name="twitter:description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Siwa & Matrouh Governorate." />
+                <meta name="twitter:title" content="Bedouin Trails - Desert Safari & Adventure Tourism in Egypt" />
+                <meta name="twitter:description" content="Experience authentic desert safari, adventure trips, and cultural journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
                 <meta name="twitter:image" content="/og-image.jpg" />
             </Helmet>
             <div className="carousel">

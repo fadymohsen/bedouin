@@ -97,17 +97,17 @@ export default function Journeys() {
         <div>
             <Helmet>
                 <title>Desert Safari Tours & Adventure Journeys | Bedouin Trails</title>
-                <meta name="description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Siwa & Matrouh Governorate. Explore the White Desert, Black Desert, and experience authentic Bedouin culture with our guided tours." />
-                <meta name="keywords" content="desert safari tours, adventure journeys, Egypt tours, Siwa tours, Matrouh, White Desert tours, Black Desert, Bedouin culture, guided tours, desert adventures" />
-                <link rel="canonical" href="https://bedouin-trails.com/journeys" />
+                <meta name="description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert. Experience authentic Bedouin culture with our guided tours." />
+                <meta name="keywords" content="desert safari tours, adventure journeys, Egypt tours, Siwa Oasis, Bahariya Oasis, White Desert tours, Black Desert, Bedouin culture, guided tours, سيوة, الواحات البحرية" />
+                <link rel="canonical" href="https://bedouintrails.com/journeys" />
                 <meta property="og:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
-                <meta property="og:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Siwa & Matrouh Governorate." />
+                <meta property="og:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://bedouin-trails.com/journeys" />
+                <meta property="og:url" content="https://bedouintrails.com/journeys" />
                 <meta property="og:image" content="/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
-                <meta name="twitter:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Siwa & Matrouh Governorate." />
+                <meta name="twitter:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
                 <meta name="twitter:image" content="/og-image.jpg" />
             </Helmet>
             <div className="search-filtering">
