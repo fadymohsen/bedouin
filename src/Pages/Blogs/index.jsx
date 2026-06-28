@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import "./scss/style.scss";
 import { useTranslation } from 'react-i18next';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Loading from '../../Components/Loading';
 import api from '../../services/api';
+import { slugify } from '../../utils/slugify';
+import { Helmet } from 'react-helmet-async';
 
-const Blog = ({ articles = [] }) => {
+const Blog = () => {
   const { t } = useTranslation();
-  const [searchParams] = useSearchParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const [activeArticle, setActiveArticle] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -39,9 +41,8 @@ const Blog = ({ articles = [] }) => {
 
   useEffect(() => {
     if (blogData.length > 0) {
-      const articleId = searchParams.get('article');
-      if (articleId) {
-        const foundArticle = blogData.find(a => a.id === parseInt(articleId));
+      if (slug) {
+        const foundArticle = blogData.find(a => slugify(a.title) === slug);
         if (foundArticle) {
           setActiveArticle(foundArticle);
           return;
@@ -51,7 +52,7 @@ const Blog = ({ articles = [] }) => {
         setActiveArticle(blogData[0]);
       }
     }
-  }, [blogData, searchParams]);
+  }, [blogData, slug]);
 
   if (isLoading) {
     return <Loading />;
@@ -74,6 +75,22 @@ const Blog = ({ articles = [] }) => {
 
   return (
     <div className="blogs-page">
+      {currentArticle && (
+        <Helmet>
+          <title>{currentArticle.meta_title || currentArticle.title} | Bedouin Trails</title>
+          <meta name="description" content={currentArticle.meta_description || currentArticle.title} />
+          <link rel="canonical" href={`https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`} />
+          <meta property="og:title" content={currentArticle.meta_title || currentArticle.title} />
+          <meta property="og:description" content={currentArticle.meta_description || currentArticle.title} />
+          <meta property="og:image" content={currentArticle.image} />
+          <meta property="og:url" content={`https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`} />
+          <meta property="og:type" content="article" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={currentArticle.meta_title || currentArticle.title} />
+          <meta name="twitter:description" content={currentArticle.meta_description || currentArticle.title} />
+          <meta name="twitter:image" content={currentArticle.image} />
+        </Helmet>
+      )}
       <aside className="sidebar">
         <h3>{t('latest_articles')}</h3>
         <nav className="article-links">
@@ -83,7 +100,7 @@ const Blog = ({ articles = [] }) => {
               className={`link-item ${currentArticle?.id === article.id ? 'active' : ''}`}
               onClick={() => {
                 setActiveArticle(article);
-                navigate(`/blogs?article=${article.id}`);
+                navigate(`/blogs/${slugify(article.title)}`);
               }}
             >
               <span className="bullet"></span>

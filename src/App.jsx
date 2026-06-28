@@ -93,6 +93,7 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/journeys" element={<Journeys />} />
                 <Route path="/blogs" element={<Blog />} />
+                <Route path="/blogs/:slug" element={<Blog />} />
                 <Route path="/faq" element={<FAQ />} />
                 {/* <Route path="/contact" element={<Contact />} /> */}
                 <Route path="/cardpage/:id" element={<Card_page />} />

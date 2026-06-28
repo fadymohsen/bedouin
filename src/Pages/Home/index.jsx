@@ -8,6 +8,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import api from "../../services/api";
 import Loading from "../../Components/Loading";
+import { slugify } from "../../utils/slugify";
 import { Helmet } from "react-helmet-async";
 
 const BlogSection = ({ articles = [] }) => {
@@ -26,7 +27,7 @@ const BlogSection = ({ articles = [] }) => {
                             <div className="content">
                                 <h3 className="blog-title">{blog.title}</h3>
                                 <p className="blog-description">{blog.description?.slice(1, 200)}</p>
-                                <Link to={`/blogs?article=${blog.id}`} className="see-more-link" aria-label={`Read more about ${blog.title}`}>
+                                <Link to={`/blogs/${slugify(blog.title)}`} className="see-more-link" aria-label={`Read more about ${blog.title}`}>
                                     {t('see_more')} {blog.title}
                                 </Link>
                             </div>

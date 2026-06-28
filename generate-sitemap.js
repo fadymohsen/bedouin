@@ -4,9 +4,20 @@ const API_BASE_URL = 'https://api.bedouintrails.com/api';
 const SITE_URL = 'https://bedouintrails.com';
 const today = new Date().toISOString().split('T')[0];
 
-async function fetchJSON(endpoint) {
+function slugify(text) {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\u0600-\u06FF-]+/g, '')
+    .replace(/--+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+async function fetchJSON(endpoint, lang = 'en') {
   const res = await fetch(`${API_BASE_URL}${endpoint}`, {
-    headers: { 'Accept': 'application/json', 'lang': 'ar' }
+    headers: { 'Accept': 'application/json', 'lang': lang }
   });
   const json = await res.json();
   const data = json.data;
@@ -20,8 +31,8 @@ async function fetchJSON(endpoint) {
 
 async function generateSitemap() {
   const [trips, articles] = await Promise.all([
-    fetchJSON('/traps'),
-    fetchJSON('/articles'),
+    fetchJSON('/traps', 'en'),
+    fetchJSON('/articles', 'en'),
   ]);
 
   const staticPages = [
@@ -40,7 +51,7 @@ async function generateSitemap() {
   }));
 
   const articlePages = articles.map(article => ({
-    loc: `/blogs?article=${article.id}`,
+    loc: `/blogs/${slugify(article.title)}`,
     changefreq: 'monthly',
     priority: '0.6',
   }));
