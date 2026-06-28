@@ -169,6 +169,36 @@ export default function Card_page() {
                 <meta property="og:image" content={trip.mainImage || 'https://bedouintrails.com/og-image.jpg'} />
                 <meta property="og:url" content={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
                 <meta property="og:type" content="product" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "TouristTrip",
+                        "name": trip.name,
+                        "description": trip.meta_description || `${trip.name} - ${trip.interfaceFrom} → ${trip.interfaceTo}`,
+                        "image": trip.mainImage || "https://bedouintrails.com/og-image.jpg",
+                        "url": `https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`,
+                        "touristType": "Adventure seekers, Nature lovers, Culture enthusiasts",
+                        "itinerary": {
+                            "@type": "ItemList",
+                            "numberOfItems": trip.duration,
+                            "description": `${trip.duration} days from ${trip.interfaceFrom} to ${trip.interfaceTo}`
+                        },
+                        "provider": {
+                            "@type": "TravelAgency",
+                            "name": "Bedouin Trails",
+                            "url": "https://bedouintrails.com"
+                        },
+                        ...(trip.rate > 0 && reviews.length > 0 ? {
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": trip.rate,
+                                "reviewCount": reviews.length,
+                                "bestRating": 5,
+                                "worstRating": 1
+                            }
+                        } : {})
+                    })}
+                </script>
             </Helmet>
             {showPopup && (
                 <div className="rating-overlay">
