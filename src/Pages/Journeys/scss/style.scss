@@ -138,10 +138,9 @@
             }
 
             @media (max-width: 480px) {
-                width: 80%;
+                flex: 1;
                 height: 30px;
                 border-radius: 12px;
-                margin-bottom: 30px;
                 -webkit-border-radius: 12px;
                 -moz-border-radius: 12px;
                 -ms-border-radius: 12px;
@@ -193,7 +192,7 @@
 
         @media (max-width: 480px) {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: center;
             gap: 8px;
         }
