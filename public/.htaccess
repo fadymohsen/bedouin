@@ -1,6 +1,13 @@
 RewriteEngine On
 RewriteBase /
 
+# Disable caching for sitemap.xml
+<Files "sitemap.xml">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</Files>
+
 # If the request is not for an existing file or directory, serve index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
