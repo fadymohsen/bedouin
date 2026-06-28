@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import api from '../../services/api';
 import Loading from '../../Components/Loading';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 export default function MyJourneys() {
     const { t } = useTranslation();
@@ -61,6 +62,10 @@ export default function MyJourneys() {
 
     return (
         <div className="my-journeys-container">
+            <Helmet>
+                <title>My Journeys | Bedouin Trails</title>
+                <meta name="robots" content="noindex, nofollow" />
+            </Helmet>
             <div className="cards-container">
                 <h1>{t('my_experiences_and_journeys')}</h1>
 

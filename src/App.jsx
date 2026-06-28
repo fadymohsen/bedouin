@@ -20,6 +20,7 @@ const Card_page = lazy(() => import("./Components/Card_page"));
 const Auth = lazy(() => import("./Pages/Auth"));
 const Profile = lazy(() => import("./Pages/Profile"));
 const BookForm = lazy(() => import("./Pages/BookForm"));
+const NotFound = lazy(() => import("./Pages/NotFound"));
 function App() {
   const [userData, setUserData] = useState(null);
   const [loadingUser, setLoadingUser] = useState(true);
@@ -104,7 +105,7 @@ function App() {
                 <Route path="/book/:tripId" element={<ProtectedRoute><BookForm /></ProtectedRoute>} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/profile" element={<Profile />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
           )}

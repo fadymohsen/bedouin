@@ -31,12 +31,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bedouintrails.com/auth</loc>
-    <lastmod>2026-06-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://bedouintrails.com/cardpage/14</loc>
     <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>

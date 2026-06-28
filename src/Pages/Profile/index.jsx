@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import "./scss/style.scss";
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 
 export default function Profile() {
     const { t } = useTranslation();
@@ -258,6 +259,10 @@ export default function Profile() {
 
     return (
         <div className='profilePage'>
+            <Helmet>
+                <title>Profile | Bedouin Trails</title>
+                <meta name="robots" content="noindex, nofollow" />
+            </Helmet>
             <div className='coverHeader'>
                 <div className='headerButtons'>
                     <div className='card_nav'>

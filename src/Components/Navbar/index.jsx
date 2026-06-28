@@ -90,7 +90,7 @@ export default function Navbar({ userData }) {
       {/* Logo */}
       <div className="logo">
         <Link to="/">
-          <img src="/img/logo.png" alt="Bedouin Trails" />
+          <img src="/img/logo.png" alt="Bedouin Trails" width="50" height="50" />
         </Link>
       </div>
 

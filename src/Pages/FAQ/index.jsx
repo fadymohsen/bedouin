@@ -72,6 +72,22 @@ export default function FAQ({ faqs = [] }) {
         <meta property="og:description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, and pricing." />
         <meta property="og:url" content="https://bedouintrails.com/faq" />
         <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
+        {faqData.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": faqData.map(item => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer
+                }
+              }))
+            })}
+          </script>
+        )}
       </Helmet>
       <div className="faq-hero">
         <h1>{t('faq')}</h1>

@@ -175,6 +175,8 @@ export default function Home() {
                                 <img
                                     src={atv}
                                     alt="ATV rider celebrating on sand dunes"
+                                    width="400"
+                                    height="500"
                                     style={{
                                         transform: hovered === "atv" ? "scale(1.07)" : "scale(1)",
                                         transition: "transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)",
@@ -205,7 +207,7 @@ export default function Home() {
                 <div className="right-p">
                     <h1>{t('our_safari_story')}</h1>
                     <p>{t('safari_experience_message')}</p>
-                    <h1 className="idk">Bedouin Trails</h1>
+                    <h2 className="idk">Bedouin Trails</h2>
                 </div>
             </div>
 
@@ -216,7 +218,7 @@ export default function Home() {
             </div>
 
             <div className="part-3">
-                <h1>{t('safari_spirit')}</h1>
+                <h2>{t('safari_spirit')}</h2>
                 <div className="gallery-layout">
                     <div className="puzzle-container">
                         {activities.map((item) => (
@@ -247,7 +249,7 @@ export default function Home() {
 
                 <div>
                     <a className="location" target='_blank' href="https://www.google.com/maps?q=28.345849,28.8724675&z=17&hl=en">
-                        <img src="/img/googlemaps.webp" alt="Location map showing Bedouin Trails office in Cairo, Egypt" loading="lazy" />
+                        <img src="/img/googlemaps.webp" alt="Location map showing Bedouin Trails office in Cairo, Egypt" loading="lazy" width="300" height="200" />
                         <div className="text">
                             <p>نتشرف بزيارتك لشركتنا</p>
                             <p>Egypt - Cairo</p>
@@ -255,7 +257,7 @@ export default function Home() {
                     </a>
                 </div>
                 <div className="paragraph">
-                    <h1>{t('contact_us')} <br />{t('book_your_trip_now')}</h1>
+                    <h2>{t('contact_us')} <br />{t('book_your_trip_now')}</h2>
                     <div className="socials">
                         <a target="_blank" href="mailto:info@bedouintrails.com" className="email">
                             <img className="img" src="https://img.icons8.com/?size=30&id=P7UIlhbpWzZm&format=png&color=000000" alt="Email icon" />
@@ -273,7 +275,7 @@ export default function Home() {
 
             <div className="part-5">
                 <h3>{t('blogs')}</h3>
-                <h1>{t('latest_published_articles')}</h1>
+                <h2>{t('latest_published_articles')}</h2>
                 <BlogSection articles={safeArticles} />
                 <Link to="/blogs">
                     <button>{t('read_more_articles')} <FaArrowRight /></button>
@@ -281,7 +283,7 @@ export default function Home() {
             </div>
 
             <div className="part-6">
-                <h1>{t('faq_title')}</h1>
+                <h2>{t('faq_title')}</h2>
                 <img
                     ref={faqImageRef}
                     src="/img/faq-img.webp"

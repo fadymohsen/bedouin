@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import './scss/style.scss';
+import { Helmet } from 'react-helmet-async';
 
 export default function BookForm({ traps = [] }) {
   const { t } = useTranslation();
@@ -153,6 +154,10 @@ export default function BookForm({ traps = [] }) {
 
   return (
     <div className="book-form-container">
+      <Helmet>
+        <title>Book Your Trip | Bedouin Trails</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="book-form-split">
         <div className="form-panel">
           <div className="form-panel-inner">

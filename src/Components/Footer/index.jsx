@@ -15,7 +15,7 @@ export default function Footer() {
   if (shouldHide) return null;
   return (
     <div className='footer'>
-      <img src="/img/logo.png" alt="Bedouin Trails Logo" />
+      <img src="/img/logo.png" alt="Bedouin Trails Logo" width="80" height="80" />
       <h1>Bedouin Trails</h1>
       <div className="links-socials">
         <div className="footer-links">
@@ -35,7 +35,7 @@ export default function Footer() {
             <Link to="/faq">{t('faq')}</Link>
           </div>
           <div className='footer-link'>
-            <Link to="/contact">{t('contact')}</Link>
+            <Link to="/#contact">{t('contact')}</Link>
           </div>
         </div>
         <div className="social-links">

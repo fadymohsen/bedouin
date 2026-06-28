@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import sweetAlert from '../../utils/sweetAlert';
 import { FaEnvelope, FaPhone, FaLock, FaEye, FaEyeSlash, FaChevronLeft, FaChevronDown } from 'react-icons/fa';
 import LanguageSwitcher from '../../Components/LanguageSwitcher';
+import { Helmet } from 'react-helmet-async';
 
 const COUNTRIES = [
   { code: 'EG', flag: '🇪🇬', dial: '+20', name: 'Egypt', min: 10, max: 10 },
@@ -525,6 +526,10 @@ const Auth = () => {
   }, [successMessage]);
   return (
     <div className="auth-page-wrapper">
+      <Helmet>
+        <title>Login | Bedouin Trails</title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Helmet>
       <div className="auth-container">
         <div className="auth-container__form-side" dir={dir}>
           <div className="brand-header">
