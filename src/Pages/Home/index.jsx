@@ -286,8 +286,8 @@ export default function Home() {
                 <h2>{t('faq_title')}</h2>
                 <img
                     ref={faqImageRef}
-                    src="/img/faq-img.webp"
-                    alt="FAQ"
+                    src="/img/western-desert-hero.webp"
+                    alt="White Desert safari convoy in Bahariya Oasis, Egypt"
                     loading="lazy"
                     onLoad={() => setFaqImageHeight(faqImageRef.current?.clientHeight || 0)}
                 />

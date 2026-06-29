@@ -1116,6 +1116,7 @@ $shadow-hover: 0 8px 25px rgba(0, 102, 255, 0.15);
         width: 90%;
         margin: 5%;
         margin-top: 0;
+        margin-bottom: 2rem;
         gap: 5%;
         padding: 2rem 50px;
         justify-content: center;
@@ -1123,11 +1124,11 @@ $shadow-hover: 0 8px 25px rgba(0, 102, 255, 0.15);
 
         @media (max-width:950px) {
             grid-template-columns: 12fr;
-            margin-bottom: 20dvh;
+            margin-bottom: 2rem;
 
         }
 
-        h1 {
+        h2 {
             grid-column: 1 / -1;
             font-size: 64px;
             font-weight: 500;
@@ -1140,12 +1141,15 @@ $shadow-hover: 0 8px 25px rgba(0, 102, 255, 0.15);
             }
         }
 
+        > a {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
         img {
             border-radius: 32px;
-            -webkit-border-radius: 32px;
-            -moz-border-radius: 32px;
-            -ms-border-radius: 32px;
-            -o-border-radius: 32px;
             width: 90%;
             height: 100%;
             object-fit: cover;
