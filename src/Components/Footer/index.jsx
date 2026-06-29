@@ -15,7 +15,7 @@ export default function Footer() {
   if (shouldHide) return null;
   return (
     <div className='footer'>
-      <img src="/img/logo.png" alt="Bedouin Trails Logo" width="80" height="80" />
+      <Link to="/"><img src="/img/logo.png" alt="Bedouin Trails Logo" width="80" height="80" /></Link>
       <h1>Bedouin Trails</h1>
       <div className="links-socials">
         <div className="footer-links">
