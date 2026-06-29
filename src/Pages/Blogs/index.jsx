@@ -142,8 +142,8 @@ const Blog = () => {
           <div className="article-text">
             <h1>{currentArticle?.title}</h1>
 
-            <p className="description">{currentArticle?.content}</p>
-            {currentArticle?.description && <p>{currentArticle?.description}</p>}
+            {currentArticle?.content && <div className="description" dangerouslySetInnerHTML={{ __html: currentArticle.content }} />}
+            {currentArticle?.description && <div dangerouslySetInnerHTML={{ __html: currentArticle.description }} />}
           </div>
         </article>
       </main>

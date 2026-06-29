@@ -26,7 +26,7 @@ const BlogSection = ({ articles = [] }) => {
                             </div>
                             <div className="content">
                                 <h3 className="blog-title">{blog.title}</h3>
-                                <p className="blog-description">{blog.description?.slice(1, 200)}</p>
+                                <p className="blog-description">{blog.description?.replace(/<[^>]*>/g, '').slice(0, 200)}...</p>
                                 <Link to={`/blogs/${slugify(blog.title)}`} className="see-more-link" aria-label={`Read more about ${blog.title}`}>
                                     {t('see_more')} {blog.title}
                                 </Link>
