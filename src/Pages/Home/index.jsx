@@ -140,7 +140,7 @@ export default function Home() {
     return (
         <main className='home'>
             <Helmet>
-                <title>Bedouin Trails - Egyptian Desert Safari Tour Company | Siwa & Bahariya Oasis Trips</title>
+                <title>Bedouin Trails - Desert Safari & Adventure Tourism | Bahariya Oasis & Siwa</title>
                 <meta name="description" content="Bedouin Trails is an Egyptian desert safari tour company based in Cairo. We organize guided safari trips to Bahariya Oasis, Siwa Oasis, the White Desert, and the Black Desert. Book your desert adventure today!" />
                 <meta name="keywords" content="Bedouin Trails company, desert safari tours Egypt, Siwa Oasis tours, Bahariya Oasis safari, White Desert camping, Black Desert tours, Egypt safari booking, بدوين ترايلز, رحلات سفاري, سيوة, الواحات البحرية, الصحراء البيضاء, الصحراء السوداء" />
                 <link rel="canonical" href="https://bedouintrails.com/" />
