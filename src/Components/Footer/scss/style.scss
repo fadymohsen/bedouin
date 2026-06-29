@@ -62,8 +62,8 @@
 
         .footer-links {
             direction: rtl;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             width: 100%;
