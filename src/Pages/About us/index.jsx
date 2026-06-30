@@ -56,6 +56,20 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <Helmet>
+        <title>About Bedouin Trails | White Desert Safari Tour Company in Egypt</title>
+        <meta name="description" content="Learn about Bedouin Trails, an Egyptian desert safari tour company offering White Desert safari tours, camel treks, desert trekking, and multi-day desert tours from Cairo to Bahariya Oasis, Siwa Oasis, and the Western Desert of Egypt." />
+        <meta name="keywords" content="White Desert Egypt, White Desert Safari, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert tour from Cairo, Black Desert Egypt tour, Sahara Hiking Tour, Multi Day Desert Trek, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert, Djara Cave Western Desert, White Desert Camping, 2 day White Desert tour Egypt" />
+        <link rel="canonical" href="https://bedouintrails.com/about" />
+        <meta property="og:title" content="About Bedouin Trails | White Desert Safari Tour Company in Egypt" />
+        <meta property="og:description" content="Learn about Bedouin Trails, offering White Desert safari tours, camel treks, desert trekking, and multi-day desert tours from Cairo to Bahariya Oasis, Siwa Oasis & the Western Desert." />
+        <meta property="og:url" content="https://bedouintrails.com/about" />
+        <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Bedouin Trails | White Desert Safari Tour Company" />
+        <meta name="twitter:description" content="Learn about Bedouin Trails, offering White Desert safari tours, camel treks, and multi-day desert tours in Egypt's Western Desert." />
+        <meta name="twitter:image" content="https://bedouintrails.com/og-image.jpg" />
+      </Helmet>
       <section className="hero-section">
         <div className="hero-overlay">
           <h1>{t('about_hero_title')}</h1>

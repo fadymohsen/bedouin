@@ -97,17 +97,17 @@ export default function Journeys() {
         <div>
             <Helmet>
                 <title>Desert Safari Tours & Adventure Journeys | Bedouin Trails</title>
-                <meta name="description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert. Experience authentic Bedouin culture with our guided tours." />
-                <meta name="keywords" content="desert safari tours, adventure journeys, Egypt tours, Siwa Oasis, Bahariya Oasis, White Desert tours, Black Desert, Bedouin culture, guided tours, سيوة, الواحات البحرية" />
+                <meta name="description" content="Browse all White Desert safari tours, Egypt desert tours, multi-day desert treks, camel treks, and desert camping adventures. Explore Bahariya Oasis, Siwa Oasis, White Desert, Black Desert, and Djara Cave in Egypt's Western Desert with Bedouin Trails." />
+                <meta name="keywords" content="White Desert Egypt, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Multi Day Desert Trek, Camel Trek Egypt, White Desert tour from Cairo, Djara Cave Western Desert, Black Desert Egypt tour, 2 day White Desert tour Egypt, Sahara Hiking Tour, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert, سيوة, الواحات البحرية" />
                 <link rel="canonical" href="https://bedouintrails.com/journeys" />
                 <meta property="og:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
-                <meta property="og:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
+                <meta property="og:description" content="Browse White Desert safari tours, Egypt desert tours, multi-day desert treks, camel treks, and camping adventures in Bahariya Oasis, Siwa Oasis & the Western Desert." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://bedouintrails.com/journeys" />
                 <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
-                <meta name="twitter:description" content="Discover amazing desert safari tours and adventure journeys in Egypt's Bahariya Oasis, Siwa Oasis, White Desert & Black Desert." />
+                <meta name="twitter:description" content="Browse White Desert safari tours, Egypt desert tours, multi-day desert treks, camel treks, and camping adventures in Bahariya Oasis, Siwa Oasis & the Western Desert." />
                 <meta name="twitter:image" content="https://bedouintrails.com/og-image.jpg" />
             </Helmet>
             <div className="search-filtering">

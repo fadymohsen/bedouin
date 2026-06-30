@@ -163,6 +163,7 @@ export default function Card_page() {
             <Helmet>
                 <title>{trip.meta_title || trip.name} | Bedouin Trails</title>
                 <meta name="description" content={trip.meta_description || `${trip.name} - ${t('departure_point')}: ${trip.interfaceFrom} → ${trip.interfaceTo}. ${t('book_your_spot_now')} | Bedouin Trails`} />
+                <meta name="keywords" content="White Desert Egypt, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert tour from Cairo, Black Desert Egypt tour, 2 day White Desert tour Egypt, Multi Day Desert Trek, Sahara Hiking Tour, Djara Cave Western Desert, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert" />
                 <link rel="canonical" href={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
                 <meta property="og:title" content={trip.meta_title || trip.name} />
                 <meta property="og:description" content={trip.meta_description || `${trip.name} - ${trip.interfaceFrom} → ${trip.interfaceTo}`} />

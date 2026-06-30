@@ -141,8 +141,8 @@ export default function Home() {
         <main className='home'>
             <Helmet>
                 <title>Bedouin Trails | Egyptian Western Desert Safari Tours</title>
-                <meta name="description" content="Bedouin Trails is an Egyptian desert safari tour company based in Cairo. We organize guided safari trips to Bahariya Oasis, Siwa Oasis, the White Desert, and the Black Desert. Book your desert adventure today!" />
-                <meta name="keywords" content="Bedouin Trails company, desert safari tours Egypt, Siwa Oasis tours, Bahariya Oasis safari, White Desert camping, Black Desert tours, Egypt safari booking, بدوين ترايلز, رحلات سفاري, سيوة, الواحات البحرية, الصحراء البيضاء, الصحراء السوداء" />
+                <meta name="description" content="Bedouin Trails is an Egyptian desert safari tour company based in Cairo. We organize White Desert safari tours, camel treks, desert trekking, and multi-day desert tours from Cairo to Bahariya Oasis, Siwa Oasis, the White Desert, and the Black Desert in Egypt's Western Desert. Book your desert adventure today!" />
+                <meta name="keywords" content="White Desert Egypt, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Sahara Hiking Tour, Multi Day Desert Trek, Camel Trek Egypt, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert, White Desert tour from Cairo, Djara Cave Western Desert, Black Desert Egypt tour, 2 day White Desert tour Egypt, Bedouin Trails, Siwa Oasis tours, بدوين ترايلز, رحلات سفاري, سيوة, الواحات البحرية, الصحراء البيضاء, الصحراء السوداء" />
                 <link rel="canonical" href="https://bedouintrails.com/" />
                 <meta property="og:title" content="Bedouin Trails - Egyptian Desert Safari Tour Company | Book Safari Trips" />
                 <meta property="og:description" content="Bedouin Trails is an Egyptian desert safari tour company. We organize guided trips to Bahariya Oasis, Siwa Oasis, White Desert & Black Desert from Cairo." />

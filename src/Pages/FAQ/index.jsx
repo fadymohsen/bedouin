@@ -71,10 +71,11 @@ export default function FAQ({ faqs = [] }) {
       ]} />
       <Helmet>
         <title>{t('faq')} | Bedouin Trails - Desert Safari in Bahariya & Siwa Oasis</title>
-        <meta name="description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, pricing, and what to expect on your adventure with Bedouin Trails." />
+        <meta name="description" content="Frequently asked questions about White Desert safari tours, Egypt desert tours, Bahariya Oasis tours, Siwa Oasis, White Desert camping, desert trekking, camel treks, multi-day desert treks, booking, pricing, and what to expect on your adventure with Bedouin Trails." />
+        <meta name="keywords" content="White Desert Egypt FAQ, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert tour from Cairo, Black Desert Egypt tour, 2 day White Desert tour Egypt, Multi Day Desert Trek, Djara Cave Western Desert, Desert Yoga Retreat Egypt" />
         <link rel="canonical" href="https://bedouintrails.com/faq" />
         <meta property="og:title" content={`${t('faq')} | Bedouin Trails`} />
-        <meta property="og:description" content="Frequently asked questions about desert safari trips, Bahariya Oasis, Siwa Oasis, White Desert camping, booking, and pricing." />
+        <meta property="og:description" content="Frequently asked questions about White Desert safari tours, Egypt desert tours, Bahariya Oasis, Siwa Oasis, White Desert camping, desert trekking, and booking." />
         <meta property="og:url" content="https://bedouintrails.com/faq" />
         <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
         {faqData.length > 0 && (
