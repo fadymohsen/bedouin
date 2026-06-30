@@ -89,7 +89,7 @@ export const SwiperCarousel = ({ status, orderid, isOrder = false, card_page = f
                             </div>
                             : <div className='card_nav'>
                                 <div className="content-logo">
-                                    <img src="/img/bedouin-trail.png" alt="Bedouin Trail Logo" loading="lazy" />
+                                    <img src="/img/bedouin-trail.webp" alt="Bedouin Trail Logo" loading="lazy" />
                                 </div>
 
                                 <div className="backBtn">
@@ -116,7 +116,7 @@ export const SwiperCarousel = ({ status, orderid, isOrder = false, card_page = f
                         {card_page == false ?
                             (<>
                                 <div className="content-logo">
-                                    <img src="/img/bedouin-trail.png" alt="Bedouin Trail Logo" loading="lazy" />
+                                    <img src="/img/bedouin-trail.webp" alt="Bedouin Trail Logo" loading="lazy" />
                                 </div>
                                 <h1>{t(slide.title)}</h1>
                                 <p>{t(slide.description)}</p></>) : null}

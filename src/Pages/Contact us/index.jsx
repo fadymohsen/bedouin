@@ -20,6 +20,9 @@ export default function Contact() {
                 <meta name="description" content="Contact Bedouin Trails to book your White Desert safari tour from Cairo, Egypt desert tours, camel treks, desert trekking adventures, and multi-day desert treks to Bahariya Oasis, Siwa Oasis, and the Western Desert of Egypt." />
                 <meta name="keywords" content="White Desert Egypt, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert tour from Cairo, Black Desert Egypt tour, 2 day White Desert tour Egypt, Multi Day Desert Trek, Sahara Hiking Tour, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert, Djara Cave Western Desert" />
                 <link rel="canonical" href="https://bedouintrails.com/contact" />
+                <link rel="alternate" hreflang="en" href="https://bedouintrails.com/contact" />
+                <link rel="alternate" hreflang="ar" href="https://bedouintrails.com/contact" />
+                <link rel="alternate" hreflang="x-default" href="https://bedouintrails.com/contact" />
                 <meta property="og:title" content="Contact Bedouin Trails | Book White Desert Safari Tours" />
                 <meta property="og:description" content="Contact Bedouin Trails to book White Desert safari tours, Egypt desert tours, camel treks, and multi-day adventures from Cairo." />
                 <meta property="og:url" content="https://bedouintrails.com/contact" />

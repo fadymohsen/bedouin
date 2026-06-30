@@ -165,6 +165,9 @@ export default function Card_page() {
                 <meta name="description" content={trip.meta_description || `${trip.name} - ${t('departure_point')}: ${trip.interfaceFrom} → ${trip.interfaceTo}. ${t('book_your_spot_now')} | Bedouin Trails`} />
                 <meta name="keywords" content="White Desert Egypt, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert tour from Cairo, Black Desert Egypt tour, 2 day White Desert tour Egypt, Multi Day Desert Trek, Sahara Hiking Tour, Djara Cave Western Desert, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert" />
                 <link rel="canonical" href={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
+                <link rel="alternate" hreflang="en" href={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
+                <link rel="alternate" hreflang="ar" href={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
+                <link rel="alternate" hreflang="x-default" href={`https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`} />
                 <meta property="og:title" content={trip.meta_title || trip.name} />
                 <meta property="og:description" content={trip.meta_description || `${trip.name} - ${trip.interfaceFrom} → ${trip.interfaceTo}`} />
                 <meta property="og:image" content={trip.mainImage || 'https://bedouintrails.com/og-image.jpg'} />
@@ -200,6 +203,43 @@ export default function Card_page() {
                         } : {})
                     })}
                 </script>
+                {trip.start_date && (
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Event",
+                            "name": trip.name,
+                            "description": trip.meta_description || `${trip.name} - desert safari tour from ${trip.interfaceFrom} to ${trip.interfaceTo}`,
+                            "image": trip.mainImage || "https://bedouintrails.com/og-image.jpg",
+                            "startDate": trip.start_date,
+                            ...(trip.end_date ? { "endDate": trip.end_date } : {}),
+                            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                            "eventStatus": trip.status === 'active' ? "https://schema.org/EventScheduled" : "https://schema.org/EventPostponed",
+                            "location": {
+                                "@type": "Place",
+                                "name": trip.interfaceTo || "Western Desert, Egypt",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressCountry": "EG"
+                                }
+                            },
+                            "organizer": {
+                                "@type": "TravelAgency",
+                                "name": "Bedouin Trails",
+                                "url": "https://bedouintrails.com"
+                            },
+                            ...(trip.price ? {
+                                "offers": {
+                                    "@type": "Offer",
+                                    "price": trip.price,
+                                    "priceCurrency": "USD",
+                                    "availability": trip.status === 'active' ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
+                                    "url": `https://bedouintrails.com/journeys/${id}/${slugify(trip.name)}`
+                                }
+                            } : {})
+                        })}
+                    </script>
+                )}
             </Helmet>
             {showPopup && (
                 <div className="rating-overlay">
@@ -243,7 +283,7 @@ export default function Card_page() {
                             <p>{trip.interfaceFrom}</p>
                             <p>{t('departure_point')}</p>
                         </div>
-                        <img src="/img/small-logo.png" alt="logo" />
+                        <img src="/img/small-logo.png" alt="Bedouin Trails desert safari company logo" />
                         <div className="end">
                             <p>{trip.interfaceTo}</p>
                             <p>{t('destination_point')}</p>

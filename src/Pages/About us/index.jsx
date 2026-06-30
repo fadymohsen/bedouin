@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Loading from '../../Components/Loading';
 import api from '../../services/api';
 import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../../utils/Breadcrumbs';
 
 const About = () => {
   const { t } = useTranslation();
@@ -56,11 +57,18 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <Breadcrumbs items={[
+        { name: 'Home', url: 'https://bedouintrails.com/' },
+        { name: 'About', url: 'https://bedouintrails.com/about' }
+      ]} />
       <Helmet>
         <title>About Bedouin Trails | White Desert Safari Tour Company in Egypt</title>
         <meta name="description" content="Learn about Bedouin Trails, an Egyptian desert safari tour company offering White Desert safari tours, camel treks, desert trekking, and multi-day desert tours from Cairo to Bahariya Oasis, Siwa Oasis, and the Western Desert of Egypt." />
         <meta name="keywords" content="White Desert Egypt, White Desert Safari, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert tour from Cairo, Black Desert Egypt tour, Sahara Hiking Tour, Multi Day Desert Trek, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert, Djara Cave Western Desert, White Desert Camping, 2 day White Desert tour Egypt" />
         <link rel="canonical" href="https://bedouintrails.com/about" />
+        <link rel="alternate" hreflang="en" href="https://bedouintrails.com/about" />
+        <link rel="alternate" hreflang="ar" href="https://bedouintrails.com/about" />
+        <link rel="alternate" hreflang="x-default" href="https://bedouintrails.com/about" />
         <meta property="og:title" content="About Bedouin Trails | White Desert Safari Tour Company in Egypt" />
         <meta property="og:description" content="Learn about Bedouin Trails, offering White Desert safari tours, camel treks, desert trekking, and multi-day desert tours from Cairo to Bahariya Oasis, Siwa Oasis & the Western Desert." />
         <meta property="og:url" content="https://bedouintrails.com/about" />

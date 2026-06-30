@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import Loading from '../../Components/Loading';
 import api from '../../services/api';
 import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../../utils/Breadcrumbs';
 
 export default function Journeys() {
     const { t } = useTranslation();
@@ -95,11 +96,18 @@ export default function Journeys() {
 
     return (
         <div>
+            <Breadcrumbs items={[
+                { name: 'Home', url: 'https://bedouintrails.com/' },
+                { name: 'Journeys', url: 'https://bedouintrails.com/journeys' }
+            ]} />
             <Helmet>
                 <title>Desert Safari Tours & Adventure Journeys | Bedouin Trails</title>
                 <meta name="description" content="Browse all White Desert safari tours, Egypt desert tours, multi-day desert treks, camel treks, and desert camping adventures. Explore Bahariya Oasis, Siwa Oasis, White Desert, Black Desert, and Djara Cave in Egypt's Western Desert with Bedouin Trails." />
                 <meta name="keywords" content="White Desert Egypt, White Desert Safari, White Desert Camping, Egypt Desert Tour, Egypt Safari Tours, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Multi Day Desert Trek, Camel Trek Egypt, White Desert tour from Cairo, Djara Cave Western Desert, Black Desert Egypt tour, 2 day White Desert tour Egypt, Sahara Hiking Tour, Desert Yoga Retreat Egypt, Meditation Retreat Egypt, Silent Retreat Desert, سيوة, الواحات البحرية" />
                 <link rel="canonical" href="https://bedouintrails.com/journeys" />
+                <link rel="alternate" hreflang="en" href="https://bedouintrails.com/journeys" />
+                <link rel="alternate" hreflang="ar" href="https://bedouintrails.com/journeys" />
+                <link rel="alternate" hreflang="x-default" href="https://bedouintrails.com/journeys" />
                 <meta property="og:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
                 <meta property="og:description" content="Browse White Desert safari tours, Egypt desert tours, multi-day desert treks, camel treks, and camping adventures in Bahariya Oasis, Siwa Oasis & the Western Desert." />
                 <meta property="og:type" content="website" />
@@ -109,6 +117,34 @@ export default function Journeys() {
                 <meta name="twitter:title" content="Desert Safari Tours & Adventure Journeys | Bedouin Trails" />
                 <meta name="twitter:description" content="Browse White Desert safari tours, Egypt desert tours, multi-day desert treks, camel treks, and camping adventures in Bahariya Oasis, Siwa Oasis & the Western Desert." />
                 <meta name="twitter:image" content="https://bedouintrails.com/og-image.jpg" />
+                {journeyData.traps && journeyData.traps.length > 0 && (
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "ItemList",
+                            "name": "Desert Safari Tours & Adventure Journeys",
+                            "description": "Browse all White Desert safari tours, Egypt desert tours, and desert camping adventures by Bedouin Trails.",
+                            "numberOfItems": journeyData.traps.length,
+                            "itemListElement": journeyData.traps.map((trip, index) => ({
+                                "@type": "ListItem",
+                                "position": index + 1,
+                                "item": {
+                                    "@type": "TouristTrip",
+                                    "name": trip.name,
+                                    "url": `https://bedouintrails.com/journeys/${trip.id}/${trip.name?.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')}`,
+                                    ...(trip.rate > 0 ? {
+                                        "aggregateRating": {
+                                            "@type": "AggregateRating",
+                                            "ratingValue": trip.rate,
+                                            "bestRating": 5,
+                                            "worstRating": 1
+                                        }
+                                    } : {})
+                                }
+                            }))
+                        })}
+                    </script>
+                )}
             </Helmet>
             <div className="search-filtering">
                 <h1>{t('journeys_title')}</h1>

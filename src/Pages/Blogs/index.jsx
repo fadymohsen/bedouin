@@ -88,6 +88,9 @@ const Blog = () => {
           <meta name="description" content={currentArticle.meta_description || currentArticle.title} />
           <meta name="keywords" content="White Desert Egypt, White Desert Safari, Egypt Desert Tour, Bahariya Oasis Tour, Western Desert Egypt, Desert Trekking Egypt, Camel Trek Egypt, White Desert Camping, White Desert tour from Cairo, Black Desert Egypt tour, Djara Cave Western Desert, Multi Day Desert Trek, Egypt Safari Tours, Sahara Hiking Tour, Desert Yoga Retreat Egypt" />
           <link rel="canonical" href={`https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`} />
+          <link rel="alternate" hreflang="en" href={`https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`} />
+          <link rel="alternate" hreflang="ar" href={`https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`} />
+          <link rel="alternate" hreflang="x-default" href={`https://bedouintrails.com/blogs/${slugify(currentArticle.title)}`} />
           <meta property="og:title" content={currentArticle.meta_title || currentArticle.title} />
           <meta property="og:description" content={currentArticle.meta_description || currentArticle.title} />
           <meta property="og:image" content={currentArticle.image} />
