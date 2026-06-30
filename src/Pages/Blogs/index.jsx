@@ -117,7 +117,7 @@ const Blog = () => {
         </>
       )}
       <aside className="sidebar">
-        <h3>{t('latest_articles')}</h3>
+        <h2>{t('latest_articles')}</h2>
         <nav className="article-links">
           {blogData.map((article) => (
             <div

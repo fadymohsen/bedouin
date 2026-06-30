@@ -131,7 +131,7 @@ export default function FAQ({ faqs = [] }) {
             </div>
           )) : (
             <div className='no-FAQ'>
-              <h1>No FAQ</h1>
+              <p>No FAQ</p>
             </div>
           )}
         </div>

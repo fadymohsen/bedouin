@@ -146,7 +146,7 @@ export default function Journeys() {
                     ))
                 ) : (
                     <div className="no-results">
-                        <h3>{t('no_results_found')}</h3>
+                        <h2>{t('no_results_found')}</h2>
                     </div>
                 )}
             </div>

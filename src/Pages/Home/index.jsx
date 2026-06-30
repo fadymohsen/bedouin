@@ -207,7 +207,7 @@ export default function Home() {
                 <div className="right-p">
                     <h1>{t('our_safari_story')}</h1>
                     <p>{t('safari_experience_message')}</p>
-                    <h2 className="idk">Bedouin Trails</h2>
+                    <h3 className="idk">Bedouin Trails</h3>
                 </div>
             </div>
 
@@ -226,7 +226,7 @@ export default function Home() {
                                 <div className="image-circle">
                                     <img src={item.img} alt={item.title} loading="lazy" />
                                     <div className="text-tag">
-                                        <h2>{item.title}</h2>
+                                        <h3>{item.title}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -274,8 +274,8 @@ export default function Home() {
             </div>
 
             <div className="part-5">
-                <h3>{t('blogs')}</h3>
-                <h2>{t('latest_published_articles')}</h2>
+                <h2>{t('blogs')}</h2>
+                <h3>{t('latest_published_articles')}</h3>
                 <BlogSection articles={safeArticles} />
                 <Link to="/blogs">
                     <button>{t('read_more_articles')} <FaArrowRight /></button>
