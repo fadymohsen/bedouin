@@ -20,6 +20,11 @@ const Auth = lazy(() => import("./Pages/Auth"));
 const Profile = lazy(() => import("./Pages/Profile"));
 const BookForm = lazy(() => import("./Pages/BookForm"));
 const Contact = lazy(() => import("./Pages/Contact us"));
+const DesertYogaRetreat = lazy(() => import("./Pages/Guides/DesertYogaRetreat"));
+const DjaraCave = lazy(() => import("./Pages/Guides/DjaraCave"));
+const CamelTrek = lazy(() => import("./Pages/Guides/CamelTrek"));
+const WhiteDesertTour = lazy(() => import("./Pages/Guides/WhiteDesertTour"));
+const BlackDesert = lazy(() => import("./Pages/Guides/BlackDesert"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
 function App() {
   const [userData, setUserData] = useState(null);
@@ -97,6 +102,11 @@ function App() {
                 <Route path="/blogs/:slug" element={<Blog />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/desert-yoga-retreat" element={<DesertYogaRetreat />} />
+                <Route path="/djara-cave" element={<DjaraCave />} />
+                <Route path="/camel-trek" element={<CamelTrek />} />
+                <Route path="/white-desert-tour-from-cairo" element={<WhiteDesertTour />} />
+                <Route path="/black-desert-egypt" element={<BlackDesert />} />
                 <Route path="/journeys/:id/:slug" element={<Card_page />} />
                 <Route path="/cardpage/:id" element={<Card_page />} />
                 <Route path="/myjourneys" element={<ProtectedRoute><MyJourneys /></ProtectedRoute>} />

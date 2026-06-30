@@ -42,6 +42,11 @@ async function generateSitemap() {
     { loc: '/blogs', changefreq: 'weekly', priority: '0.8' },
     { loc: '/faq', changefreq: 'monthly', priority: '0.7' },
     { loc: '/contact', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/white-desert-tour-from-cairo', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/black-desert-egypt', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/djara-cave', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/camel-trek', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/desert-yoga-retreat', changefreq: 'monthly', priority: '0.8' },
   ];
 
   const tripPages = trips.map(trip => ({
