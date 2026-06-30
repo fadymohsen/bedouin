@@ -240,7 +240,7 @@ export default function Home() {
                 <div className="social-links">
                     <div className="vertical-line"></div>
                     <div className="socials">
-                        <a target='_blank' href="https://https://wa.link/qtrpve/" className='link'><FaWhatsapp id='whatsapp' /></a>
+                        <a target='_blank' href="https://wa.link/qtrpve/" className='link'><FaWhatsapp id='whatsapp' /></a>
                         <a target='_blank' href="https://www.instagram.com/the.white.and.black.desert?igsh=aHdjbzB6ajJ5dTBk" className='link'><FaInstagram id='instgram' /></a>
                         <a target='_blank' href="https://www.facebook.com/profile.php?id=61587717913002" className='link'><FaFacebook id='facebook' /></a>
                     </div>

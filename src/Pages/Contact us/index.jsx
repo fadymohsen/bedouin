@@ -72,18 +72,18 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="right-p">
-                    <h1>{t('contact_experience_title')}</h1>
+                    <h2>{t('contact_experience_title')}</h2>
                     <p>{t('contact_experience_text')}</p>
-                    <h1 className="idk">Bedouin Trails</h1>
+                    <h2 className="idk">Bedouin Trails</h2>
                 </div>
             </div>
             <div className="part-2">
 
                 <div className="social-links">
 
-                    <div class="vertical-line"></div>
+                    <div className="vertical-line"></div>
                     <div className="socials">
-                        <a href="https://https://wa.link/qtrpve/" className='link' target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.link/qtrpve/" className='link' target="_blank" rel="noopener noreferrer">
                             <FaWhatsapp id='whatsapp' />
                         </a>
 
@@ -95,12 +95,12 @@ export default function Contact() {
                             <FaFacebook id='facebook' />
                         </a>
                     </div>
-                    <div class="vertical-line"></div>
+                    <div className="vertical-line"></div>
 
                 </div>
                 <div className="location"></div>
                 <div className="paragraph">
-                    <h1>{t('contact_us')} <br />{t('book_your_trip_now')}</h1>
+                    <h2>{t('contact_us')} <br />{t('book_your_trip_now')}</h2>
                     <div className="socials">
                         <div className="whatsapp">
                             <p>+20 10 02717380</p>

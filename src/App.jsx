@@ -19,6 +19,7 @@ const Card_page = lazy(() => import("./Components/Card_page"));
 const Auth = lazy(() => import("./Pages/Auth"));
 const Profile = lazy(() => import("./Pages/Profile"));
 const BookForm = lazy(() => import("./Pages/BookForm"));
+const Contact = lazy(() => import("./Pages/Contact us"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
 function App() {
   const [userData, setUserData] = useState(null);
@@ -95,6 +96,7 @@ function App() {
                 <Route path="/blogs" element={<Blog />} />
                 <Route path="/blogs/:slug" element={<Blog />} />
                 <Route path="/faq" element={<FAQ />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/journeys/:id/:slug" element={<Card_page />} />
                 <Route path="/cardpage/:id" element={<Card_page />} />
                 <Route path="/myjourneys" element={<ProtectedRoute><MyJourneys /></ProtectedRoute>} />

@@ -41,6 +41,7 @@ async function generateSitemap() {
     { loc: '/about', changefreq: 'monthly', priority: '0.8' },
     { loc: '/blogs', changefreq: 'weekly', priority: '0.8' },
     { loc: '/faq', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/contact', changefreq: 'monthly', priority: '0.7' },
   ];
 
   const tripPages = trips.map(trip => ({
