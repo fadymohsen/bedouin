@@ -1,31 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import Breadcrumbs from '../../utils/Breadcrumbs';
 import './scss/style.scss';
 
 export default function WhiteDesertTour() {
+  const { t } = useTranslation();
   return (
     <div className="guide-page">
       <Breadcrumbs items={[
-        { name: 'Home', url: 'https://bedouintrails.com/' },
-        { name: 'White Desert Tour from Cairo', url: 'https://bedouintrails.com/white-desert-tour-from-cairo' }
+        { name: t('breadcrumb_home'), url: 'https://bedouintrails.com/' },
+        { name: t('guide_whitetour_breadcrumb'), url: 'https://bedouintrails.com/white-desert-tour-from-cairo' }
       ]} />
       <Helmet>
-        <title>White Desert Tour from Cairo | 2 Day White Desert Tour Egypt</title>
-        <meta name="description" content="Book a White Desert tour from Cairo with Bedouin Trails. Our popular 2 day White Desert tour Egypt package includes 4x4 transport, Bahariya Oasis, Black Desert, Crystal Mountain, White Desert camping under the stars, and all meals. Departs daily from Cairo." />
-        <meta name="keywords" content="White Desert tour from Cairo, 2 day White Desert tour Egypt, White Desert Egypt, White Desert Safari, White Desert Camping, overnight White Desert tour, Cairo to White Desert, Bahariya Oasis Tour, Egypt Desert Tour, Egypt Safari Tours, Western Desert Egypt, Black Desert Egypt tour" />
+        <title>{t('guide_whitetour_title')}</title>
+        <meta name="description" content={t('guide_whitetour_meta_desc')} />
+        <meta name="keywords" content={t('guide_whitetour_meta_keywords')} />
         <link rel="canonical" href="https://bedouintrails.com/white-desert-tour-from-cairo" />
         <link rel="alternate" hreflang="en" href="https://bedouintrails.com/white-desert-tour-from-cairo" />
         <link rel="alternate" hreflang="ar" href="https://bedouintrails.com/white-desert-tour-from-cairo" />
         <link rel="alternate" hreflang="x-default" href="https://bedouintrails.com/white-desert-tour-from-cairo" />
-        <meta property="og:title" content="White Desert Tour from Cairo | 2 Day Tour with Camping" />
-        <meta property="og:description" content="2 day White Desert tour from Cairo including Bahariya Oasis, Black Desert, Crystal Mountain, and overnight camping. Book with Bedouin Trails." />
+        <meta property="og:title" content={t('guide_whitetour_og_title')} />
+        <meta property="og:description" content={t('guide_whitetour_og_desc')} />
         <meta property="og:url" content="https://bedouintrails.com/white-desert-tour-from-cairo" />
         <meta property="og:image" content="https://bedouintrails.com/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="White Desert Tour from Cairo | 2 Day Egypt Desert Tour" />
-        <meta name="twitter:description" content="2 day White Desert tour from Cairo with Bahariya Oasis, camping, and all meals included." />
+        <meta name="twitter:title" content={t('guide_whitetour_twitter_title')} />
+        <meta name="twitter:description" content={t('guide_whitetour_twitter_desc')} />
         <meta name="twitter:image" content="https://bedouintrails.com/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -50,94 +52,88 @@ export default function WhiteDesertTour() {
       </Helmet>
 
       <div className="guide-hero" style={{ backgroundImage: "url('/img/bg.webp')" }}>
-        <h1>White Desert Tour from Cairo — 2 Day Egypt Desert Safari</h1>
+        <h1>{t('guide_whitetour_h1')}</h1>
       </div>
 
       <div className="guide-content">
-        <p>
-          The White Desert is Egypt's most spectacular natural wonder — a surreal landscape of chalk-white rock formations sculpted by wind over millions of years. Our 2 day White Desert tour from Cairo is the most popular way to experience this otherworldly destination, combining the White Desert with Bahariya Oasis, the Black Desert, and Crystal Mountain in one unforgettable trip.
-        </p>
+        <p>{t('guide_whitetour_intro_p')}</p>
 
-        <h2>2 Day White Desert Tour Itinerary</h2>
+        <h2>{t('guide_whitetour_itinerary_h2')}</h2>
 
-        <h3>Day 1: Cairo to White Desert</h3>
+        <h3>{t('guide_whitetour_day1_h3')}</h3>
         <ol>
-          <li><strong>Morning departure from Cairo</strong> — pickup from your hotel at 7:00 AM. Drive approximately 4 hours on the Western Desert highway to Bahariya Oasis</li>
-          <li><strong>Bahariya Oasis</strong> — lunch in the oasis town and visit the local market</li>
-          <li><strong>Black Desert</strong> — explore the volcanic black hills and dark dolerite-covered mountains</li>
-          <li><strong>Crystal Mountain</strong> — stop at this unique quartz crystal ridge rising from the desert floor</li>
-          <li><strong>White Desert arrival</strong> — enter the White Desert National Park and explore the iconic chalk formations (mushroom rocks, chicken rock, and more)</li>
-          <li><strong>Desert camping</strong> — traditional Bedouin dinner cooked over open fire, stargazing under some of the darkest skies on Earth</li>
+          <li><strong>{t('guide_whitetour_day1_li1_bold')}</strong> — {t('guide_whitetour_day1_li1_text')}</li>
+          <li><strong>{t('guide_whitetour_day1_li2_bold')}</strong> — {t('guide_whitetour_day1_li2_text')}</li>
+          <li><strong>{t('guide_whitetour_day1_li3_bold')}</strong> — {t('guide_whitetour_day1_li3_text')}</li>
+          <li><strong>{t('guide_whitetour_day1_li4_bold')}</strong> — {t('guide_whitetour_day1_li4_text')}</li>
+          <li><strong>{t('guide_whitetour_day1_li5_bold')}</strong> — {t('guide_whitetour_day1_li5_text')}</li>
+          <li><strong>{t('guide_whitetour_day1_li6_bold')}</strong> — {t('guide_whitetour_day1_li6_text')}</li>
         </ol>
 
-        <h3>Day 2: White Desert to Cairo</h3>
+        <h3>{t('guide_whitetour_day2_h3')}</h3>
         <ol>
-          <li><strong>Sunrise in the White Desert</strong> — watch the sunrise paint the white formations in gold, pink, and orange</li>
-          <li><strong>Morning exploration</strong> — explore more White Desert formations and take photos in the morning light</li>
-          <li><strong>Breakfast</strong> — fresh tea and traditional desert breakfast</li>
-          <li><strong>Return via Bahariya Oasis</strong> — optional visit to Bahariya hot springs</li>
-          <li><strong>Arrive Cairo</strong> — approximately 6:00 PM</li>
+          <li><strong>{t('guide_whitetour_day2_li1_bold')}</strong> — {t('guide_whitetour_day2_li1_text')}</li>
+          <li><strong>{t('guide_whitetour_day2_li2_bold')}</strong> — {t('guide_whitetour_day2_li2_text')}</li>
+          <li><strong>{t('guide_whitetour_day2_li3_bold')}</strong> — {t('guide_whitetour_day2_li3_text')}</li>
+          <li><strong>{t('guide_whitetour_day2_li4_bold')}</strong> — {t('guide_whitetour_day2_li4_text')}</li>
+          <li><strong>{t('guide_whitetour_day2_li5_bold')}</strong> — {t('guide_whitetour_day2_li5_text')}</li>
         </ol>
 
         <div className="highlight-box">
-          <p>Our 2 day White Desert tour is perfect for travellers with limited time who want to experience the best of Egypt's Western Desert. It's our most booked tour — departing daily from Cairo year-round (October–April recommended).</p>
+          <p>{t('guide_whitetour_highlight')}</p>
         </div>
 
-        <h2>What's Included</h2>
+        <h2>{t('guide_whitetour_included_h2')}</h2>
         <ul>
-          <li>Hotel pickup and drop-off in Cairo</li>
-          <li>4x4 Toyota Land Cruiser with experienced Bedouin driver/guide</li>
-          <li>All meals: 1 lunch, 1 dinner, 1 breakfast (vegetarian options available)</li>
-          <li>Desert camping equipment: sleeping bags, mats, blankets</li>
-          <li>White Desert National Park entry fees</li>
-          <li>Unlimited water and hot beverages</li>
-          <li>English-speaking guide</li>
+          <li>{t('guide_whitetour_included_li1')}</li>
+          <li>{t('guide_whitetour_included_li2')}</li>
+          <li>{t('guide_whitetour_included_li3')}</li>
+          <li>{t('guide_whitetour_included_li4')}</li>
+          <li>{t('guide_whitetour_included_li5')}</li>
+          <li>{t('guide_whitetour_included_li6')}</li>
+          <li>{t('guide_whitetour_included_li7')}</li>
         </ul>
 
-        <h2>What's Not Included</h2>
+        <h2>{t('guide_whitetour_notincluded_h2')}</h2>
         <ul>
-          <li>Personal travel insurance</li>
-          <li>Tipping (optional but appreciated)</li>
-          <li>Alcoholic beverages</li>
+          <li>{t('guide_whitetour_notincluded_li1')}</li>
+          <li>{t('guide_whitetour_notincluded_li2')}</li>
+          <li>{t('guide_whitetour_notincluded_li3')}</li>
         </ul>
 
-        <h2>How to Get to the White Desert from Cairo</h2>
-        <p>
-          The White Desert is located approximately 450 km southwest of Cairo in the Western Desert. The drive takes about 4 hours via the Cairo-Bahariya highway. There is no public transport to the White Desert — it can only be reached by private 4x4 vehicle with an experienced guide. Bedouin Trails provides door-to-door transport from any Cairo hotel.
-        </p>
+        <h2>{t('guide_whitetour_howto_h2')}</h2>
+        <p>{t('guide_whitetour_howto_p')}</p>
 
-        <h2>Best Time to Visit the White Desert</h2>
-        <p>
-          The best months for a White Desert tour are <strong>October through April</strong>. During these months, daytime temperatures range from 18–28°C, perfect for exploration and photography. Nights are cool (5–15°C) but comfortable with proper camping gear. Avoid June through August when temperatures can exceed 45°C.
-        </p>
+        <h2>{t('guide_whitetour_besttime_h2')}</h2>
+        <p>{t('guide_whitetour_besttime_p1')} <strong>{t('guide_whitetour_besttime_p1_bold')}</strong>{t('guide_whitetour_besttime_p1_cont')}</p>
 
         <div className="faq-section">
-          <h2>Frequently Asked Questions</h2>
+          <h2>{t('guide_whitetour_faq_h2')}</h2>
 
           <div className="faq-item">
-            <h3>How much does a 2 day White Desert tour cost?</h3>
-            <p>Pricing depends on group size. Solo travellers, couples, and private groups are all welcome. Contact us for current rates — all tours include transport, meals, camping, and guide.</p>
+            <h3>{t('guide_whitetour_faq1_q')}</h3>
+            <p>{t('guide_whitetour_faq1_a')}</p>
           </div>
 
           <div className="faq-item">
-            <h3>Is the White Desert safe?</h3>
-            <p>Yes. The White Desert is a well-visited national park. Our Bedouin guides have decades of desert experience, and we carry full safety and communication equipment on every trip.</p>
+            <h3>{t('guide_whitetour_faq2_q')}</h3>
+            <p>{t('guide_whitetour_faq2_a')}</p>
           </div>
 
           <div className="faq-item">
-            <h3>Can I extend to a 3-day tour?</h3>
-            <p>Absolutely. We offer 3-day, 4-day, and longer multi-day desert treks that include additional destinations like Djara Cave, the Great Sand Sea, and Agabat Valley.</p>
+            <h3>{t('guide_whitetour_faq3_q')}</h3>
+            <p>{t('guide_whitetour_faq3_a')}</p>
           </div>
 
           <div className="faq-item">
-            <h3>Is it suitable for children?</h3>
-            <p>Yes, families are welcome. The 2 day White Desert tour is suitable for children aged 5 and up. We adjust the pace and activities for families.</p>
+            <h3>{t('guide_whitetour_faq4_q')}</h3>
+            <p>{t('guide_whitetour_faq4_a')}</p>
           </div>
         </div>
 
         <div className="cta-section">
-          <p>Ready to explore the White Desert?</p>
-          <Link to="/journeys" className="cta-button">Book Your White Desert Tour</Link>
+          <p>{t('guide_whitetour_cta')}</p>
+          <Link to="/journeys" className="cta-button">{t('guide_whitetour_cta_button')}</Link>
         </div>
       </div>
     </div>

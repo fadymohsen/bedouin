@@ -47,6 +47,15 @@ async function generateSitemap() {
     { loc: '/djara-cave', changefreq: 'monthly', priority: '0.8' },
     { loc: '/camel-trek', changefreq: 'monthly', priority: '0.8' },
     { loc: '/desert-yoga-retreat', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/western-desert-egypt-guide', changefreq: 'monthly', priority: '0.9' },
+    { loc: '/how-to-get-to-white-desert', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/what-to-pack-white-desert', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/best-time-to-visit-white-desert', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/white-desert-tour-cost', changefreq: 'monthly', priority: '0.8' },
+    { loc: '/white-desert-vs-wadi-rum', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/stargazing-western-desert', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/crystal-mountain-egypt', changefreq: 'monthly', priority: '0.7' },
+    { loc: '/desert-safety-guide', changefreq: 'monthly', priority: '0.7' },
   ];
 
   const tripPages = trips.map(trip => ({

@@ -25,6 +25,15 @@ const DjaraCave = lazy(() => import("./Pages/Guides/DjaraCave"));
 const CamelTrek = lazy(() => import("./Pages/Guides/CamelTrek"));
 const WhiteDesertTour = lazy(() => import("./Pages/Guides/WhiteDesertTour"));
 const BlackDesert = lazy(() => import("./Pages/Guides/BlackDesert"));
+const WesternDesertGuide = lazy(() => import("./Pages/Guides/WesternDesertGuide"));
+const HowToGetThere = lazy(() => import("./Pages/Guides/HowToGetThere"));
+const PackingGuide = lazy(() => import("./Pages/Guides/PackingGuide"));
+const BestTime = lazy(() => import("./Pages/Guides/BestTime"));
+const TourCost = lazy(() => import("./Pages/Guides/TourCost"));
+const WhiteDesertVsWadiRum = lazy(() => import("./Pages/Guides/WhiteDesertVsWadiRum"));
+const Stargazing = lazy(() => import("./Pages/Guides/Stargazing"));
+const CrystalMountain = lazy(() => import("./Pages/Guides/CrystalMountain"));
+const DesertSafety = lazy(() => import("./Pages/Guides/DesertSafety"));
 const NotFound = lazy(() => import("./Pages/NotFound"));
 function App() {
   const [userData, setUserData] = useState(null);
@@ -107,6 +116,15 @@ function App() {
                 <Route path="/camel-trek" element={<CamelTrek />} />
                 <Route path="/white-desert-tour-from-cairo" element={<WhiteDesertTour />} />
                 <Route path="/black-desert-egypt" element={<BlackDesert />} />
+                <Route path="/western-desert-egypt-guide" element={<WesternDesertGuide />} />
+                <Route path="/how-to-get-to-white-desert" element={<HowToGetThere />} />
+                <Route path="/what-to-pack-white-desert" element={<PackingGuide />} />
+                <Route path="/best-time-to-visit-white-desert" element={<BestTime />} />
+                <Route path="/white-desert-tour-cost" element={<TourCost />} />
+                <Route path="/white-desert-vs-wadi-rum" element={<WhiteDesertVsWadiRum />} />
+                <Route path="/stargazing-western-desert" element={<Stargazing />} />
+                <Route path="/crystal-mountain-egypt" element={<CrystalMountain />} />
+                <Route path="/desert-safety-guide" element={<DesertSafety />} />
                 <Route path="/journeys/:id/:slug" element={<Card_page />} />
                 <Route path="/cardpage/:id" element={<Card_page />} />
                 <Route path="/myjourneys" element={<ProtectedRoute><MyJourneys /></ProtectedRoute>} />
