@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import guideTranslations from './i18n-guides';
 
 const resources = {
   en: {
@@ -2698,6 +2699,13 @@ const resources = {
     }
   },
 };
+
+// Merge guide translations into resources
+for (const lang of Object.keys(guideTranslations)) {
+  if (resources[lang] && resources[lang].translation) {
+    Object.assign(resources[lang].translation, guideTranslations[lang]);
+  }
+}
 
 i18n.use(LanguageDetector).use(initReactI18next).init({
   resources,
